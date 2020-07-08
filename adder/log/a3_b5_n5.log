@@ -1,0 +1,36 @@
+========================================
+Executing adder with a=3, b=5, n=5...
+Expect ans = 8, Measure res = 23
+Expect ans = 8, Measure res = 27
+Expect ans = 8, Measure res = 9
+Expect ans = 8, Measure res = 1
+Expect ans = 8, Measure res = 29
+Expect ans = 8, Measure res = 26
+Expect ans = 8, Measure res = 10
+Expect ans = 8, Measure res = 15
+Expect ans = 8, Measure res = 31
+Expect ans = 8, Measure res = 13
+Expect ans = 8, Measure res = 21
+Expect ans = 8, Measure res = 4
+Expect ans = 8, Measure res = 16
+Expect ans = 8, Measure res = 8
+Expect ans = 8, Measure res = 6
+Expect ans = 8, Measure res = 20
+Expect ans = 8, Measure res = 2
+Expect ans = 8, Measure res = 14
+Expect ans = 8, Measure res = 18
+Expect ans = 8, Measure res = 0
+Expect ans = 8, Measure res = 7
+Expect ans = 8, Measure res = 28
+Expect ans = 8, Measure res = 3
+Expect ans = 8, Measure res = 25
+Expect ans = 8, Measure res = 19
+Expect ans = 8, Measure res = 30
+Expect ans = 8, Measure res = 22
+Expect ans = 8, Measure res = 11
+Expect ans = 8, Measure res = 17
+Expect ans = 8, Measure res = 5
+Expect ans = 8, Measure res = 24
+Expect ans = 8, Measure res = 12
+Result correct! Adder success!
+========================================

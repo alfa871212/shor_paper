@@ -1,0 +1,27 @@
+% \documentclass[preview]{standalone}
+% If the image is too large to fit on this documentclass use
+\documentclass[draft]{beamer}
+% img_width = 6, img_depth = 16
+\usepackage[size=custom,height=10,width=31,scale=0.7]{beamerposter}
+% instead and customize the height and width (in cm) to fit.
+% Large images may run out of memory quickly.
+% To fix this use the LuaLaTeX compiler, which dynamically
+% allocates memory.
+\usepackage[braket, qm]{qcircuit}
+\usepackage{amsmath}
+\pdfmapfile{+sansmathaccent.map}
+% \usepackage[landscape]{geometry}
+% Comment out the above line if using the beamer documentclass.
+\begin{document}
+\begin{equation*}
+    \Qcircuit @C=1.0em @R=0.0em @!R {
+	 	\lstick{ {ctrl}_{0} :  } & \qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \qw\\
+	 	\lstick{ {ctrl}_{1} :  } & \qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \qw\\
+	 	\lstick{ {b}_{0} :  } & \multigate{2}{qft} & \multigate{2}{{\textbackslash}PHI\,ADD(A)} & \multigate{2}{{\textbackslash}phi\,ADD(N){\_}dg} & \multigate{2}{qft} & \qw & \multigate{2}{qft} & \multigate{2}{{\textbackslash}PHI\,ADD(N)} & \multigate{2}{{\textbackslash}PHI\,ADD(A)} & \multigate{2}{qft} & \qw & \qw & \qw & \multigate{2}{qft} & \multigate{2}{{\textbackslash}PHI\,ADD(A)} & \qw & \qw\\
+	 	\lstick{ {b}_{1} :  } & \ghost{qft} & \ghost{{\textbackslash}PHI\,ADD(A)} & \ghost{{\textbackslash}phi\,ADD(N){\_}dg} & \ghost{qft} & \qw & \ghost{qft} & \ghost{{\textbackslash}PHI\,ADD(N)} & \ghost{{\textbackslash}PHI\,ADD(A)} & \ghost{qft} & \qw & \qw & \qw & \ghost{qft} & \ghost{{\textbackslash}PHI\,ADD(A)} & \qw & \qw\\
+	 	\lstick{ {b}_{2} :  } & \ghost{qft} & \ghost{{\textbackslash}PHI\,ADD(A)} & \ghost{{\textbackslash}phi\,ADD(N){\_}dg} & \ghost{qft} & \ctrl{1} & \ghost{qft} & \ghost{{\textbackslash}PHI\,ADD(N)} & \ghost{{\textbackslash}PHI\,ADD(A)} & \ghost{qft} & \gate{X} & \ctrl{1} & \gate{X} & \ghost{qft} & \ghost{{\textbackslash}PHI\,ADD(A)} & \qw & \qw\\
+	 	\lstick{ {anc}_{0} :  } & \qw & \qw & \qw & \qw & \targ & \qw & \ctrl{-1} & \qw & \qw & \qw & \targ & \qw & \qw & \qw & \qw & \qw\\
+	 }
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,29 @@
+% \documentclass[preview]{standalone}
+% If the image is too large to fit on this documentclass use
+\documentclass[draft]{beamer}
+% img_width = 8, img_depth = 18
+\usepackage[size=custom,height=12,width=33,scale=0.7]{beamerposter}
+% instead and customize the height and width (in cm) to fit.
+% Large images may run out of memory quickly.
+% To fix this use the LuaLaTeX compiler, which dynamically
+% allocates memory.
+\usepackage[braket, qm]{qcircuit}
+\usepackage{amsmath}
+\pdfmapfile{+sansmathaccent.map}
+% \usepackage[landscape]{geometry}
+% Comment out the above line if using the beamer documentclass.
+\begin{document}
+\begin{equation*}
+    \Qcircuit @C=1.0em @R=0.2em @!R {
+	 	\lstick{ {a}_{0} :  } & \qw & \ctrl{4} & \qw & \qw & \qw & \qw & \ctrl{5} & \qw & \qw & \qw & \ctrl{6} & \qw & \qw & \ctrl{7} & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {a}_{1} :  } & \qw & \qw & \ctrl{3} & \qw & \qw & \qw & \qw & \ctrl{4} & \qw & \qw & \qw & \ctrl{5} & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {a}_{2} :  } & \qw & \qw & \qw & \ctrl{2} & \qw & \qw & \qw & \qw & \ctrl{3} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {a}_{3} :  } & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {b}_{0} :  } & \multigate{3}{qft} & \gate{1} & \gate{2} & \gate{3} & \gate{4} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \multigate{3}{qft} & \qw & \qw\\
+	 	\lstick{ {b}_{1} :  } & \ghost{qft} & \qw & \qw & \qw & \qw & \qw & \gate{1} & \gate{2} & \gate{3} & \qw & \qw & \qw & \qw & \qw & \qw & \ghost{qft} & \qw & \qw\\
+	 	\lstick{ {b}_{2} :  } & \ghost{qft} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{1} & \gate{2} & \qw & \qw & \qw & \ghost{qft} & \qw & \qw\\
+	 	\lstick{ {b}_{3} :  } & \ghost{qft} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{1} & \qw & \ghost{qft} & \qw & \qw\\
+	 }
+\end{equation*}
+
+\end{document}

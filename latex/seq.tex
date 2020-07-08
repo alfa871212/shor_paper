@@ -1,0 +1,32 @@
+% \documentclass[preview]{standalone}
+% If the image is too large to fit on this documentclass use
+\documentclass[draft]{beamer}
+% img_width = 11, img_depth = 27
+\usepackage[size=custom,height=16,width=49,scale=0.7]{beamerposter}
+% instead and customize the height and width (in cm) to fit.
+% Large images may run out of memory quickly.
+% To fix this use the LuaLaTeX compiler, which dynamically
+% allocates memory.
+\usepackage[braket, qm]{qcircuit}
+\usepackage{amsmath}
+\pdfmapfile{+sansmathaccent.map}
+% \usepackage[landscape]{geometry}
+% Comment out the above line if using the beamer documentclass.
+\begin{document}
+\begin{equation*}
+    \Qcircuit @C=1.0em @R=0.0em @!R {
+	 	\lstick{ {ctrl}_{0} :  } & \qw & \gate{X} & \gate{H} & \ctrl{1} & \gate{H} & \meter & \gate{R0} & \gate{X} & \gate{H} & \ctrl{1} & \gate{H} & \meter & \gate{R1} & \gate{X} & \gate{H} & \ctrl{1} & \gate{H} & \meter & \gate{R2} & \gate{X} & \gate{H} & \ctrl{1} & \gate{H} & \meter & \gate{R3} & \qw & \qw\\
+	 	\lstick{ {x}_{0} :  } & \qw & \qw & \qw & \multigate{5}{UA0} & \qw & \qw & \qw & \qw & \qw & \multigate{5}{UA1} & \qw & \qw & \qw & \qw & \qw & \multigate{5}{UA2} & \qw & \qw & \qw & \qw & \qw & \multigate{5}{UA3} & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {x}_{1} :  } & \gate{X} & \qw & \qw & \ghost{UA0} & \qw & \qw & \qw & \qw & \qw & \ghost{UA1} & \qw & \qw & \qw & \qw & \qw & \ghost{UA2} & \qw & \qw & \qw & \qw & \qw & \ghost{UA3} & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {b}_{0} :  } & \qw & \qw & \qw & \ghost{UA0} & \qw & \qw & \qw & \qw & \qw & \ghost{UA1} & \qw & \qw & \qw & \qw & \qw & \ghost{UA2} & \qw & \qw & \qw & \qw & \qw & \ghost{UA3} & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {b}_{1} :  } & \qw & \qw & \qw & \ghost{UA0} & \qw & \qw & \qw & \qw & \qw & \ghost{UA1} & \qw & \qw & \qw & \qw & \qw & \ghost{UA2} & \qw & \qw & \qw & \qw & \qw & \ghost{UA3} & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {b}_{2} :  } & \qw & \qw & \qw & \ghost{UA0} & \qw & \qw & \qw & \qw & \qw & \ghost{UA1} & \qw & \qw & \qw & \qw & \qw & \ghost{UA2} & \qw & \qw & \qw & \qw & \qw & \ghost{UA3} & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{ {ancilla}_{0} :  } & \qw & \qw & \qw & \ghost{UA0} & \qw & \qw & \qw & \qw & \qw & \ghost{UA1} & \qw & \qw & \qw & \qw & \qw & \ghost{UA2} & \qw & \qw & \qw & \qw & \qw & \ghost{UA3} & \qw & \qw & \qw & \qw & \qw\\
+	 	\lstick{c0_{0}: } & \cw & \control \cw \cwx[-7] & \cw & \cw & \cw & \cw \cwx[-7] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\lstick{c1_{0}: } & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \control \cw \cwx[-8] & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\lstick{c2_{0}: } & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \control \cw \cwx[-9] & \cw & \cw & \cw & \cw \cwx[-9] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\lstick{c3_{0}: } & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \control \cw \cwx[-10] & \cw & \cw & \cw & \cw \cwx[-10] & \cw & \cw & \cw\\
+	 }
+\end{equation*}
+
+\end{document}

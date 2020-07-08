@@ -1,0 +1,5 @@
+========================================
+Executing adder with a=3, b=3, n=3...
+Expect ans = 6, Measure res = 6
+Result correct! Adder success!
+========================================

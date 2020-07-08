@@ -1,0 +1,31 @@
+% \documentclass[preview]{standalone}
+% If the image is too large to fit on this documentclass use
+\documentclass[draft]{beamer}
+% img_width = 10, img_depth = 8
+\usepackage[size=custom,height=15,width=21,scale=0.7]{beamerposter}
+% instead and customize the height and width (in cm) to fit.
+% Large images may run out of memory quickly.
+% To fix this use the LuaLaTeX compiler, which dynamically
+% allocates memory.
+\usepackage[braket, qm]{qcircuit}
+\usepackage{amsmath}
+\pdfmapfile{+sansmathaccent.map}
+% \usepackage[landscape]{geometry}
+% Comment out the above line if using the beamer documentclass.
+\begin{document}
+\begin{equation*}
+    \Qcircuit @C=1.0em @R=0.0em @!R {
+	 	\lstick{ {up}_{0} :  } & \qw & \ctrl{4} & \qw & \qw & \qw & \multigate{3}{qft} & \qw & \qw\\
+	 	\lstick{ {up}_{1} :  } & \qw & \qw & \ctrl{3} & \qw & \qw & \ghost{qft} & \qw & \qw\\
+	 	\lstick{ {up}_{2} :  } & \qw & \qw & \qw & \ctrl{2} & \qw & \ghost{qft} & \qw & \qw\\
+	 	\lstick{ {up}_{3} :  } & \qw & \qw & \qw & \qw & \ctrl{1} & \ghost{qft} & \qw & \qw\\
+	 	\lstick{ {down}_{0} :  } & \qw & \multigate{5}{UA0} & \multigate{5}{UA1} & \multigate{5}{UA2} & \multigate{5}{UA3} & \qw & \qw & \qw\\
+	 	\lstick{ {down}_{1} :  } & \gate{X} & \ghost{UA0} & \ghost{UA1} & \ghost{UA2} & \ghost{UA3} & \qw & \qw & \qw\\
+	 	\lstick{ {b}_{0} :  } & \qw & \ghost{UA0} & \ghost{UA1} & \ghost{UA2} & \ghost{UA3} & \qw & \qw & \qw\\
+	 	\lstick{ {b}_{1} :  } & \qw & \ghost{UA0} & \ghost{UA1} & \ghost{UA2} & \ghost{UA3} & \qw & \qw & \qw\\
+	 	\lstick{ {ancilla}_{0} :  } & \qw & \ghost{UA0} & \ghost{UA1} & \ghost{UA2} & \ghost{UA3} & \qw & \qw & \qw\\
+	 	\lstick{ {ancilla}_{1} :  } & \qw & \ghost{UA0} & \ghost{UA1} & \ghost{UA2} & \ghost{UA3} & \qw & \qw & \qw\\
+	 }
+\end{equation*}
+
+\end{document}
