@@ -1,50 +1,29 @@
-import math
+from sympy.ntheory.continued_fraction import *
+import numpy as np
+import math,sys,os
+import argparse
 import csv
-import sys,os
-def sumLis(b):
-    ret=0
-    temp=0
-    for i in range(0,len(b)-1):
-        temp=1/(b[-(i+1)]+temp)
-    ret = temp+b[0]
-    return ret
-    
-        
-def myCF(x_value,t_upper,N,a):
-    if x_value<=0:
-        print("Wrong x_value\n")
-        return False
+def args_parse():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--type','-t',metavar='seq/nor')
+    method = parser.add_mutually_exclusive_group()
+    method.add_argument('--individual','--indiv','-i',type=int,nargs=4,metavar=('res','len','N','a'))
+    method.add_argument('--file','-f',type=int,nargs=2,metavar=('N','a'))
 
-    T=math.pow(2,t_upper)
-    x_over_T = x_value/T
-    temp = x_over_T
-    threshold = 1/(2*T)
-    b=[]
-    t=[]
-    
-    i=0
-    while i>=0:
-        appro=0
-        b.append(math.floor(temp))
-        t.append(temp-b[i])
-        if t[i]==0:
-            print("Found exact expansion!")
-            print("The expansion is "+str(x_over_T)+'\n')
-            r = b[i]
-            return checkFactor(r,N,a)
-                         
-        temp = 1/t[i]
-        appro = sumLis(b)
-        print("This is {0} appro: {1}".format(i,appro))
-        
-        if abs(appro-x_over_T)<threshold:
-            r = b[i]
-            return checkFactor(r,N,a)
-        i+=1
-        if i > 10:
-            print("Too many approximation! Go to the next case!")
-
-   
+    parser.add_argument('--log','-l',action='store_true')
+    return parser.parse_args()
+def run_CF(args):
+    if args.log:
+        path='./test.log'
+        sys.stdout = open(path, 'w') 
+    if args.individual:
+        res=args.individual[0]
+        bitlen = args.individual[1]
+        N=args.individual[2]
+        a=args.individual[3]
+        cf_ind(res,bitlen,N,a)
+    if args.file:
+        cf_file(args)
 def checkFactor(r,N,a):
     if r%2==0:
         exponential = math.pow(a,r/2)
@@ -53,74 +32,112 @@ def checkFactor(r,N,a):
         maxiter_2 = 15
         p_factor = math.gcd(plus,N)
         q_factor = math.gcd(minus,N)
-        if p_factor==1 or p_factor==N or q_factor==1 or q_factor==N:
-            print('Found just trivial factors, not good enough\n')
+        p_tri_flag = False
+        q_tri_flag = False
+        if p_factor==1 or p_factor==N:
+            p_tri_flag =True
+        if q_factor==1 or q_factor==N:
+            q_tri_flag = True
+        if p_tri_flag and q_tri_flag:
+            print(f'trivial factors: {p_factor}, {q_factor}')
+            return False
+        if not p_tri_flag:
+            if math.gcd(p_factor,N)!=1:
+                print('Factors: {0}, {1}'.format(p_factor,N//p_factor))
+                return True
+        if not q_tri_flag:
+            if math.gcd(q_factor,N)!=1:
+                print('Factors: {0}, {1}'.format(q_factor,N//q_factor))
+                return True
+        '''
+        if (p_factor==1 or p_factor==N) and (q_factor==1 or q_factor==N):
+            print(f'trivial factors: {p_factor}, {q_factor}')
             return False                  
-        else:
-            print('The factors of {0} are {1} and {2}\n'.format(N,p_factor,q_factor))
-            print('Found the desired factors!\n')               
-            return True
+        '''
+        
+        print('Factors: {0}, {1}'.format(p_factor,q_factor))           
+        return True
     else:
         print("The estimated r is odd, try other cases!\n")
-
-
-def modInverse(a, m) : 
-    a = a % m; 
-    for x in range(1, m) : 
-        if ((a * x) % m == 1) : 
-            return x 
-    return 1
-def egcd(a, b):
-    if a == 0:
-        return (b, 0, 1)
+def cf_file(args):
+    if not args.type:
+        raise Exception("-f must with -t")
+    if args.type=='seq':
+        path='./sequential/result/'
+    elif args.type=='nor':
+        path='./normal/result/'
     else:
-        g, y, x = egcd(b % a, a)
-        return (g, x - (b // a) * y, y)
-def modinv(a, m):
-    g, x, y = egcd(a, m)
-    if g != 1:
-        raise Exception('modular inverse does not exist')
-    else:
-        return x % m
-def factorize_res(filename,a,n,N,type):
-    print("Dealing with {0}".format(filename))
+        raise Exception("Wrong given type!")
+    fileargs = args.file
+    N = fileargs[0]
+    a = fileargs[1]
+    filename = str(N)+"_"+str(a)+'.csv'
+    filename = path+filename
+    print(filename)
     with open(filename, newline='') as f:
         reader = csv.reader(f)
         data = list(reader)
-        #data=sorted(data,key=lambda x : int(x[1]),reverse=True)
-    #print(data)
-    failed = True
-    success_lis=[]
-    for i in range(0,len(data)):#len(counts_result)):
+    succ =[]
+    for i in range(len(data)):
+        res = data[i][0]
+        print('+'*35)
+        print(f"res: {res}")
+        if cf_ind(res,len(res),N,a):
+            succ.append(res)
+    if len(succ)!=0:
+        print('*'*35)
+        print(f"Success res: {succ}")
+        print('*'*35)
+def cf_ind(res,bitlen,N,a):
+    appro_deg=5
+    res = int(str(res),2)
+    
+    denomi = 2**bitlen
+    frac = Rational(res,denomi)
+    threshold = 1/(2*denomi)
+    print("="*35)
+    print("CF algorithm rule:")
+    print("(1) appro.denominator < N")
+    print("(2) abs(appro-frac) < threshold")
+    print("="*35)
 
-        measure_res = data[i]
-        res_key = data[i][0]
-        
-        x_value = int(res_key,2)
-   
-        if type==1:
-            frac = x_value/math.pow(2,2*n)
-        else:
-            frac = x_value/math.pow(2,2*n)
-        print("Analysing result {0}, which in decimal is {1}. Analyzing fraction: {2} \n".format(measure_res[0],int(x_value),frac))
-        
-        success =myCF(x_value,int(2*n),int(N),int(a))
-   
-               
-        if success:
-            failed = False
-            success_lis.append((N,a,measure_res[0]))
+    print(f"Analyzing fraction: {frac}")
+    print(f"N = {N}, a={a}")
+    it = continued_fraction_convergents(continued_fraction_iterator(frac))
+    #next(it)
+    for n in range(appro_deg):
+        print('-'*35)
+        try:
+            app=next(it)
+            print(f'{n}th appro: {app}')
+            dif = app-frac
+            print(f'abs_diff: {abs(dif)}')
+            
+            pos_r=app.denominator()
+            print(f'possible_order: {pos_r}')
+            if pos_r %2 ==1 or pos_r ==0:
+                print("The possible order is odd or 0")
+                continue
+            if pos_r>N:
+                print("Violate rule (1)")
+                continue     
+            if abs(dif)>threshold:
+                print("Violate rule (2)")
+                continue
+            if checkFactor(pos_r,N,a):
+                return True
+        except Exception as e:
+            print(e)
             break
-        else:
-            print("The probability is too small, this should be trivial case!")
-            break
-    if type==1:
-        put = 'seq'
-    else:
-        put = 'nor'
-    with open(f'./{a}_succ_{put}.csv','w') as out:
-        w = csv.writer(out, delimiter='\t')        # override for tab delimiter
-        w.writerows(success_lis)  
-    if failed:
-        print("Factorization failed!")
-        return 0
+    return False
+   
+if __name__ == '__main__':
+    res = int('10000000',2)
+    denomi = 2**8
+    frac = Rational(3,7)
+    
+    
+    #CF(res,denomi,15,4)
+    #cf3(frac,15,4)
+    cf_ind(res,8,15,4)
+    
