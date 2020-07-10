@@ -1,20 +1,4 @@
-./sequential/result/15_2.csv
-+++++++++++++++++++++++++++++++++++
-res: 00000000
-===================================
-CF algorithm rule:
-(1) appro.denominator < N
-(2) abs(appro-frac) < threshold
-===================================
-Analyzing fraction: 0
-N = 15, a=2
------------------------------------
-0th appro: 0
-abs_diff: 0
-possible_order: 1
-The possible order is odd or 0
------------------------------------
-
+./sequential/result/15_8.csv
 +++++++++++++++++++++++++++++++++++
 res: 01000000
 ===================================
@@ -23,7 +7,7 @@ CF algorithm rule:
 (2) abs(appro-frac) < threshold
 ===================================
 Analyzing fraction: 1/4
-N = 15, a=2
+N = 15, a=8
 -----------------------------------
 0th appro: 0
 abs_diff: 1/4
@@ -42,7 +26,7 @@ CF algorithm rule:
 (2) abs(appro-frac) < threshold
 ===================================
 Analyzing fraction: 3/4
-N = 15, a=2
+N = 15, a=8
 -----------------------------------
 0th appro: 0
 abs_diff: 3/4
@@ -66,7 +50,7 @@ CF algorithm rule:
 (2) abs(appro-frac) < threshold
 ===================================
 Analyzing fraction: 1/2
-N = 15, a=2
+N = 15, a=8
 -----------------------------------
 0th appro: 0
 abs_diff: 1/2
@@ -77,6 +61,22 @@ The possible order is odd or 0
 abs_diff: 0
 possible_order: 2
 Factors: 3, 5
++++++++++++++++++++++++++++++++++++
+res: 00000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 0
+N = 15, a=8
+-----------------------------------
+0th appro: 0
+abs_diff: 0
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+
 ***********************************
 Success res: ['01000000', '11000000', '10000000']
 ***********************************

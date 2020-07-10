@@ -71,7 +71,7 @@ def adder(a,b,n): #a+b in fourier space
     
     for i in range(n):
        qc.measure(i+n, n-i-1)
-    circuit_drawer(qc,output='mpl',filename='./report/adder_prevent.png')
+    #circuit_drawer(qc,output='mpl',filename='./report/adder_prevent.png')
     
     return qc
 def c_phase(num):

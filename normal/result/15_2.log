@@ -1,39 +1,4 @@
-./sequential/result/15_2.csv
-+++++++++++++++++++++++++++++++++++
-res: 00000000
-===================================
-CF algorithm rule:
-(1) appro.denominator < N
-(2) abs(appro-frac) < threshold
-===================================
-Analyzing fraction: 0
-N = 15, a=2
------------------------------------
-0th appro: 0
-abs_diff: 0
-possible_order: 1
-The possible order is odd or 0
------------------------------------
-
-+++++++++++++++++++++++++++++++++++
-res: 01000000
-===================================
-CF algorithm rule:
-(1) appro.denominator < N
-(2) abs(appro-frac) < threshold
-===================================
-Analyzing fraction: 1/4
-N = 15, a=2
------------------------------------
-0th appro: 0
-abs_diff: 1/4
-possible_order: 1
-The possible order is odd or 0
------------------------------------
-1th appro: 1/4
-abs_diff: 0
-possible_order: 4
-Factors: 5, 3
+./normal/result/15_2.csv
 +++++++++++++++++++++++++++++++++++
 res: 11000000
 ===================================
@@ -59,6 +24,25 @@ abs_diff: 0
 possible_order: 4
 Factors: 5, 3
 +++++++++++++++++++++++++++++++++++
+res: 01000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 1/4
+N = 15, a=2
+-----------------------------------
+0th appro: 0
+abs_diff: 1/4
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/4
+abs_diff: 0
+possible_order: 4
+Factors: 5, 3
++++++++++++++++++++++++++++++++++++
 res: 10000000
 ===================================
 CF algorithm rule:
@@ -77,6 +61,22 @@ The possible order is odd or 0
 abs_diff: 0
 possible_order: 2
 Factors: 3, 5
++++++++++++++++++++++++++++++++++++
+res: 00000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 0
+N = 15, a=2
+-----------------------------------
+0th appro: 0
+abs_diff: 0
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+
 ***********************************
-Success res: ['01000000', '11000000', '10000000']
+Success res: ['11000000', '01000000', '10000000']
 ***********************************

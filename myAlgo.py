@@ -1,5 +1,28 @@
 from gateSet import *
 import os,sys
+
+def run_test(args):
+    if args.adder:
+        para = args.adder
+        test_adder(para[0],para[1],para[2],args)
+    if args.phimod:
+        para = args.phimod
+        test_ccphiMOD(para[0],para[1],para[2],para[3],args)
+    if args.cmult:
+        para = args.cmult
+        testCMULT(para[0],para[1],para[2],para[3],para[4],args)
+    if args.cu:
+        para = args.cu
+        test_cu(para[0],para[1],para[2],para[3],args)
+    if args.nor:
+        para = args.nor
+        shorNormal(para[0],para[1],args)
+    if args.seq:
+        para = args.seq
+        shorSequential(para[0],para[1],args)
+    
+
+
 def test_adder_appro(a,b,n,appro,args):
     if args.log:  
         if not os.path.exists('adder/log'):
@@ -44,8 +67,6 @@ def test_adder_appro(a,b,n,appro,args):
             os.makedirs(dir)
         path = f'./adder_appro/result/{dir_name}/adder{a}_{b}_appro{appro}.png'
         plot_histogram(res,figsize=(10,10),title=f'adder{a}_{b}_appro{appro}').savefig(path)
-
-
 
     print("="*40)
 def test_adder(a,b,n,args):
@@ -344,36 +365,6 @@ def rangeTest_ccphiMOD(N) :
             csv_out.writerow(row) 
 
 
-
-'''
-def shorSequential(N,a,print_qc=False):
-    n = math.ceil(math.log(N,2))
-    ctrl = QuantumRegister(1,name='ctrl')
-    down = QuantumRegister(n,name='x')
-    down_b = QuantumRegister(n+1,name='b')
-    ancilla = QuantumRegister(1,name='ancilla')
-           
-    cr_m = ClassicalRegister(2*n,name='to_measure')
-    cr_ancilla = ClassicalRegister(1,name='c_ancilla')
-
-    qc = QuantumCircuit(ctrl,down,down_b,ancilla,cr_m,cr_ancilla)
-    qc.x(down[n-1])
-    for i in range(0, 2*n):
-        qc.x(ctrl).c_if(cr_ancilla, 1)
-        qc.h(ctrl)
-        gate = cu_a(n,a**(2**(2*n-1-i)),N)
-        qc.append(gate,qargs=ctrl[:]+down[:]+down_b[:]+ancilla[:])
-     
-        qc.append(r_gate(n,i,cr_m),qargs=ctrl[:])
-       #for j in range(0, 2**i):
-        #    qc.u1(getAngle(j, i), ctrl).c_if(cr_m, j)
-        qc.h(ctrl)
-        qc.measure(ctrl, cr_m[i])
-        qc.measure(ctrl, cr_ancilla)
-    circuit_drawer(qc,output='mpl',filename='./gateSet.png',scale=1.3)
-    res=sim.mySim(qc)
-    print(sim.sort_by_prob(res))
-'''
 def shorNormal_circuit(N,a,args):
     #check whether a, N is coprime
     if math.gcd(a,N)!=1:
@@ -477,16 +468,16 @@ def shorSequential(N,a,args):
         circuit_drawer(qc,output='mpl',filename=f'./sequential/circuit/{N}_{a}.png',scale=0.6)
 
     res=sim.mySim(qc,args)
-    print(res)
+    #print(res)
     new_dict={}
     
     for iter in list(res):
         tmp = iter
         tmp=tmp.replace(" ","")
         new_dict[tmp]=res.pop(iter)
-    print(new_dict)
-    
-    lis = list(new_dict)
+   # print(new_dict)
+    lis = sim.sort_by_prob(new_dict)
+    #print(lis)
     if args.output:
         respath=f'./sequential/result'
         if not os.path.exists(respath):
