@@ -14,16 +14,16 @@ You should install qiskit (Anaconda environment preferred) to run my code on you
 pip install qiskit 
 ```
 ## Structure
-shor.py is the main program.
-gateSet.py implements the gates needed in Shor's algorithm.
-myAlgo.py implements the test of gates and algorithm.
-simulation.py implements the simulation function and argparse in the main program.
-CF.py implements the continuous fraction algorithm and factorize the given N and a.
-factorize.py implements the factorizing main program.
+* [shor.py] (https://github.com/alfa871212/shor_paper/blob/master/shor.py) is the main program.
+* [gateSet.py] (https://github.com/alfa871212/shor_paper/blob/master/gateSet.py) implements the gates needed in Shor's algorithm.
+* [myAlgo.py] (https://github.com/alfa871212/shor_paper/blob/master/myAlgo.py) implements the test of gates and algorithm.
+* [simulation.py] (https://github.com/alfa871212/shor_paper/blob/master/simulation.py) implements the simulation function and argparse in the main program.
+* [CF.py] (https://github.com/alfa871212/shor_paper/blob/master/CF.py) implements the continuous fraction algorithm and factorize the given N and a.
+* [factorize.py] (https://github.com/alfa871212/shor_paper/blob/master/factorize.py) implements the factorizing main program.
 
 In this repo, I would separate the Shor's algorithm into two parts. First is the circuit experient which would generate results in /normal/result/ or /sequential/result/ depending on the circuit mode. Then run the factorizing part for the factorization.
 ## Run
-In shor.py, the execution flag is listed below
+In [shor.py] (https://github.com/alfa871212/shor_paper/blob/master/shor.py), the execution flag is listed below
 ```
 python shor.py [-h] [--simulation local/ibmq | --real]
                (--adder a b n | --phimod n b a N | --cmult n x b a N | --cu n x a N | --nor N a | --seq N a)
@@ -55,7 +55,7 @@ For example, adder test with a=2 b=3 n=3, we want to do the a+b in n-bit number.
 python shor.py -s local --adder 2 2 3 
 ```
 
-In factorize.py,
+In [factorize.py](https://github.com/alfa871212/shor_paper/blob/master/factorize.py),
 ```
 factorize.py [-h] [--type seq/nor] [--individual res len N a | --file N a] [--log]
 ```
