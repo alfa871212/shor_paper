@@ -32,14 +32,18 @@ def mySim(cir,args,method='qasm'):
             print("Choose default backend...local.")
             backend = qk.Aer.get_backend(sim_type)
 
-
-    sim_res = qk.execute(cir,backend,shots=8192,optimization_level=3)
-    
-    qk.tools.job_monitor(sim_res)
-    sim_result=sim_res.result()
-    job_uid = sim_res.job_id()
+    try:
+        sim_res = qk.execute(cir,backend,shots=8192,optimization_level=3)
         
-    counts_result = sim_result.get_counts(cir)
+        qk.tools.job_monitor(sim_res)
+        sim_result=sim_res.result()
+        job_uid = sim_res.job_id()
+            
+        counts_result = sim_result.get_counts(cir)
+    except Exception as e:
+        print(e)
+        if e==Exception('IBMQJobFailureError'):
+            print(sim_res.error_message())
     
     #print(counts_result)
     return counts_result
@@ -55,8 +59,8 @@ def process_command():
     gate.add_argument('--phimod',nargs=4,type=int,metavar=('n','b','a','N'))
     gate.add_argument('--cmult',nargs=5,type=int,metavar=('n','x','b','a','N'))
     gate.add_argument('--cu',nargs=4,type=int,metavar=('n','x','a','N'))
-    gate.add_argument('--nor',nargs=2,metavar=('N','a'))
-    gate.add_argument('--seq',nargs=2,metavar=('N','a'))
+    gate.add_argument('--nor',nargs=2,type=int,metavar=('N','a'))
+    gate.add_argument('--seq',nargs=2,type=int,metavar=('N','a'))
 
     #parser.add_argument('--test','-t',required=True, metavar='gate/algo')
     parser.add_argument('--output','-o',action='store_true')
