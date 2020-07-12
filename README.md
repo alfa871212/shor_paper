@@ -8,10 +8,13 @@ For the access of the real quantum devices, you are recommended to register an I
 
 ### Prerequisites
 
-You should install qiskit (Anaconda environment preferred) to run my code on your machine or using https://quantum-computing.ibm.com/ instead.
+You should install qiskit ([Anaconda](https://www.anaconda.com/products/individual) environment preferred) to run my code on your machine or using https://quantum-computing.ibm.com/ instead.
 
 ```
-pip install qiskit 
+conda create --name yourenvname python=3.7
+source activate yourenvname
+pip install qiskit
+pip install matplotlib #required for plotting
 ```
 ## Structure
 * [shor.py](https://github.com/alfa871212/shor_paper/blob/master/shor.py) is the main program.
