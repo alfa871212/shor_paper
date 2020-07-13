@@ -26,7 +26,7 @@ pip install matplotlib #required for plotting
 
 In this repo, I would separate the Shor's algorithm into two parts. First is the circuit experient which would generate results in /normal/result/ or /sequential/result/ depending on the circuit mode. Then run the factorizing part for the factorization.
 ## Run
-In [shor.py](https://github.com/alfa871212/shor_paper/blob/master/shor.py), the execution flag is listed below
+In [shor.py」」(https://github.com/alfa871212/shor_paper/blob/master/shor.py), the execution flag is listed below
 ```
 python shor.py [-h] [--simulation local/ibmq | --real]
                (--adder a b n | --phimod n b a N | --cmult n x b a N | --cu n x a N | --nor N a | --seq N a)

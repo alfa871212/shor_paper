@@ -382,7 +382,7 @@ def shorNormal_circuit(N,a,args):
     qc.x(down[n-1])
     #control-unitary gate application
     for i in range(0,2*n):
-        gate = cu_a(n,a**(2**i),15,print_qc=False)
+        gate = cu_a(n,a**(2**i),N,print_qc=False)
         qc.append(gate,qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
     #rest circuit construction
     qftgate = myQFT(2*n,inverse=True)
@@ -407,7 +407,7 @@ def shorNormal(N,a,args):
     qc.x(down[n-1])
     #control-unitary gate application
     for i in range(0,2*n):
-        gate = cu_a(n,a**(2**i),15,print_qc=False)
+        gate = cu_a(n,a**(2**i),N,print_qc=False)
         qc.append(gate,qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
     #rest circuit construction
     qftgate = myQFT(2*n,inverse=True)
