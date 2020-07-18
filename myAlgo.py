@@ -390,7 +390,7 @@ def shorNormal_circuit(N,a,args):
     for i in range(0,2*n):
         qc.measure(up[i],cr[2*n-1-i])
     return qc
-def shorNormal(N,a,args):
+def shorNormal(N,a,args=None):
     #check whether a, N is coprime
     if math.gcd(a,N)!=1:
         raise Exception("a,N are not coprime.")
@@ -416,7 +416,9 @@ def shorNormal(N,a,args):
         qc.measure(up[i],cr[2*n-1-i])
     #===========================================================================
     #Result formation
-    
+    if args== None:
+        return qc
+         
     if args.draw:
         qcpath=f'./normal/circuit'
         if not os.path.exists(qcpath):
@@ -435,7 +437,7 @@ def shorNormal(N,a,args):
         for i in lis:
             csv_out.writerow(i)
 
-def shorSequential(N,a,args):
+def shorSequential(N,a,args=None):
     n = math.ceil(math.log(N,2))
     ctrl = QuantumRegister(1,name='ctrl')
     down = QuantumRegister(n,name='x')
@@ -460,7 +462,8 @@ def shorSequential(N,a,args):
         if neighbor_range != range(0,0):
             gate = myR(i,neighbor_range,cr_lis)
             qc.append(gate,qargs=ctrl[:])     
-
+    if args== None:
+        return qc
     if args.draw:
         qcpath=f'./sequential/circuit'
         if not os.path.exists(qcpath):

@@ -90,8 +90,12 @@ def cf_file(args):
         print('*'*35)
 def cf_ind(res,bitlen,N,a):
     appro_deg=5
-    res = int(str(res),2)
-    
+    if len(res)>bitlen:
+        res = res.replace(" ","")
+    if not isinstance(res,str):
+        res = int(str(res),2)
+    else:
+        res = int(res,2)
     denomi = 2**bitlen
     frac = Rational(res,denomi)
     threshold = 1/(2*denomi)

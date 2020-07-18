@@ -15,7 +15,17 @@ def sort_by_key(result):
 def sort_by_prob(result):
     return sorted([(k, result[k]) for k in result.keys()], key=lambda x: x[1], 
             reverse=True)
+def ind_mySim(cir):
+    provider = qk.IBMQ.get_provider('ibm-q-hub-ntu')
+    backend =qk.Aer.get_backend('qasm_simulator')
+    #backend = provider.get_backend('ibmq_qasm_simulator')
 
+    sim_res = qk.execute(cir,backend,shots=1,optimization_level=1)
+    qk.tools.job_monitor(sim_res)
+    sim_result=sim_res.result()
+    counts=sim_result.get_counts()
+    
+    return counts
 def mySim(cir,args,method='qasm'):
     
     provider = qk.IBMQ.get_provider('ibm-q-hub-ntu')
