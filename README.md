@@ -85,7 +85,7 @@ python factorize.py --file 15 4 --type seq
 ```
 ### Some changes in the Qiskit source code
 
-Because the build-in plotting function in Qiskit didn't satisfy my demand, I change the some line in Qiskit source code. If you want the same effect of plot_histogram, you could compare the python file with yours in the qiskit package.
+Because the build-in plotting function in Qiskit didn't satisfy my demand, I change the some line in Qiskit source code. If you want the same effect of plot_histogram, you could compare the my_counts_visualization.py with yours (w/o my_) in the qiskit package.
 ```
 in location of anaconda installation
 qiskit/visualization/counts_visualization.py
