@@ -43,13 +43,13 @@ def mySim(cir,args,method='qasm'):
             backend = qk.Aer.get_backend(sim_type)
 
     try:
-        sim_res = qk.execute(cir,backend,shots=8192,optimization_level=3)
+        sim_res = qk.execute(cir,backend,shots=8192,optimization_level=1)
         
         qk.tools.job_monitor(sim_res)
         sim_result=sim_res.result()
         job_uid = sim_res.job_id()
             
-        counts_result = sim_result.get_counts(cir)
+        counts_result = sim_result.get_counts()
     except Exception as e:
         print(e)
         if e==Exception('IBMQJobFailureError'):

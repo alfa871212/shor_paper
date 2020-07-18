@@ -3,9 +3,7 @@ from myAlgo import *
 import simulation as sim
 alis=[]
 N = 15
-for i in range(2,15):
-    if math.gcd(i,N)==1:
-        alis.append(i)
+
 a = 4
 n = math.ceil(math.log(N,2))
 ctrl = True

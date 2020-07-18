@@ -16,7 +16,12 @@ def run_test(args):
         test_cu(para[0],para[1],para[2],para[3],args)
     if args.nor:
         para = args.nor
-        shorNormal(para[0],para[1],args)
+        if para[1]==0:
+            for i in range(2,para[0]):
+                if math.gcd(i,para[0])==1:
+                    shorNormal(para[0],i,args)
+        else:
+            shorNormal(para[0],para[1],args)
     if args.seq:
         para = args.seq
         shorSequential(para[0],para[1],args)
