@@ -13,9 +13,7 @@ def args_parse():
     parser.add_argument('--log','-l',action='store_true')
     return parser.parse_args()
 def run_CF(args):
-    if args.log:
-        path='./test.log'
-        sys.stdout = open(path, 'w') 
+ 
     if args.individual:
         res=args.individual[0]
         bitlen = args.individual[1]
@@ -23,7 +21,13 @@ def run_CF(args):
         a=args.individual[3]
         cf_ind(res,bitlen,N,a)
     if args.file:
-        cf_file(args)
+        if args.file[1]==0:
+            for i in range(2,args.file[0]):
+                if math.gcd(i,args.file[0])==1:
+                    args.file[1]=i
+                    cf_file(args)
+        else:
+            cf_file(args)
 def checkFactor(r,N,a):
     if r%2==0:
         exponential = math.pow(a,r/2)
@@ -60,6 +64,7 @@ def checkFactor(r,N,a):
     else:
         print("The estimated r is odd, try other cases!\n")
 def cf_file(args):
+
     if not args.type:
         raise Exception("-f must with -t")
     if args.type=='seq':
@@ -73,6 +78,9 @@ def cf_file(args):
     a = fileargs[1]
     filename = str(N)+"_"+str(a)+'.csv'
     filename = path+filename
+    if args.log:
+        logpath = path+str(N)+"_"+str(a)+'.log'
+        sys.stdout = open(logpath, 'w')
     print(filename)
     with open(filename, newline='') as f:
         reader = csv.reader(f)

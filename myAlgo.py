@@ -74,13 +74,14 @@ def test_adder_appro(a,b,n,appro,args):
         plot_histogram(res,figsize=(10,10),title=f'adder{a}_{b}_appro{appro}').savefig(path)
 
     print("="*40)
-def test_adder(a,b,n,args):
+def test_adder(a,b,n):
     if args.log:  
         if not os.path.exists('adder/log'):
             os.makedirs('adder/log')
         path = f'adder/log/a{a}_b{b}_n{n}.log'
         sys.stdout = open(path, 'w') 
     qc=adder(a,b,n)
+
     #print("="*40)
     print('=========================')
     print(f"Executing adder with a={a}, b={b}, n={n}...")

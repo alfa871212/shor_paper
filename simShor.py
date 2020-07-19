@@ -14,7 +14,7 @@ tStart = time.time()
 qc = shorSequential(N,a)
 #print(qc)
 while ctrl:
-    res = sim.ind_mySim(qc)
+    res = sim.single_mySim(qc)
     lis = sim.sort_by_prob(res)
     res = lis[0][0]
     from factorize import cf_ind

@@ -1,0 +1,4859 @@
+./normal/result/21_5.csv
++++++++++++++++++++++++++++++++++++
+res: 1000000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 1/2
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 1/2
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 0
+possible_order: 2
+Factors: 3, 7
++++++++++++++++++++++++++++++++++++
+res: 0000000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 0
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 0
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1010101011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 683/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 683/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 341/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 1/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 683/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0010101011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 171/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 171/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 169/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 1/3072
+possible_order: 6
+trivial factors: 21, 1
+-----------------------------------
+3th appro: 85/509
+abs_diff: 1/521216
+possible_order: 509
+The possible order is odd or 0
+-----------------------------------
+4th appro: 171/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101010101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 853/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 853/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 171/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 169/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 1/3072
+possible_order: 6
+trivial factors: 21, 1
+-----------------------------------
+4th appro: 424/509
+abs_diff: 1/521216
+possible_order: 509
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101010101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 341/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 341/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 1/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 341/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0010101010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 85/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 85/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 1/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 42/253
+abs_diff: 1/129536
+possible_order: 253
+The possible order is odd or 0
+-----------------------------------
+3th appro: 85/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1101010110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 427/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 427/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 85/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 1/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 211/253
+abs_diff: 1/129536
+possible_order: 253
+The possible order is odd or 0
+-----------------------------------
+4th appro: 427/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101010110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 171/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 171/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 85/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 1/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 171/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1010101010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 341/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 341/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 171/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 85/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 1/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 341/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010101100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 43/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 43/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 41/1280
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 1/768
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 21/125
+abs_diff: 1/32000
+possible_order: 125
+The possible order is odd or 0
+-----------------------------------
+4th appro: 43/256
+abs_diff: 0
+possible_order: 256
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010101100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 171/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 171/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 85/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 1/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 171/256
+abs_diff: 0
+possible_order: 256
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1010101001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 681/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 681/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 343/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 169/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 5/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 135/203
+abs_diff: 3/207872
+possible_order: 203
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101010100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 213/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 213/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 43/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 41/1280
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 1/768
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 104/125
+abs_diff: 1/32000
+possible_order: 125
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101010100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 85/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 85/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 1/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 85/256
+abs_diff: 0
+possible_order: 256
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0101010111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 343/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 343/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 169/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 5/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 68/203
+abs_diff: 3/207872
+possible_order: 203
+The possible order is odd or 0
+-----------------------------------
+4th appro: 69/206
+abs_diff: 1/105472
+possible_order: 206
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101010111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 855/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 855/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 169/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 5/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 81/97
+abs_diff: 9/99328
+possible_order: 97
+The possible order is odd or 0
+-----------------------------------
+4th appro: 86/103
+abs_diff: 1/105472
+possible_order: 103
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010101001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 169/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 169/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 5/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 16/97
+abs_diff: 9/99328
+possible_order: 97
+The possible order is odd or 0
+-----------------------------------
+3th appro: 17/103
+abs_diff: 1/105472
+possible_order: 103
+The possible order is odd or 0
+-----------------------------------
+4th appro: 169/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010101101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 173/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 173/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 159/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 7/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 12/71
+abs_diff: 5/72704
+possible_order: 71
+The possible order is odd or 0
+-----------------------------------
+4th appro: 25/148
+abs_diff: 1/37888
+possible_order: 148
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010101101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 685/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 685/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 339/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 7/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 97/145
+abs_diff: 3/148480
+possible_order: 145
+The possible order is odd or 0
+-----------------------------------
+4th appro: 196/293
+abs_diff: 1/300032
+possible_order: 293
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101010011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 851/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 851/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 173/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 159/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 7/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 59/71
+abs_diff: 5/72704
+possible_order: 71
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101010011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 339/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 339/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 7/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 48/145
+abs_diff: 3/148480
+possible_order: 145
+The possible order is odd or 0
+-----------------------------------
+3th appro: 97/293
+abs_diff: 1/300032
+possible_order: 293
+The possible order is odd or 0
+-----------------------------------
+4th appro: 339/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101011000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 43/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 43/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 21/128
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 1/384
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 43/128
+abs_diff: 0
+possible_order: 128
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1010101000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 85/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 85/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 43/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 21/128
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 1/384
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 85/128
+abs_diff: 0
+possible_order: 128
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101010010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 425/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 425/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 87/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 77/2560
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 5/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 39/47
+abs_diff: 7/24064
+possible_order: 47
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010100111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 167/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 167/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 11/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 7/43
+abs_diff: 13/44032
+possible_order: 43
+The possible order is odd or 0
+-----------------------------------
+3th appro: 8/49
+abs_diff: 9/50176
+possible_order: 49
+The possible order is odd or 0
+-----------------------------------
+4th appro: 15/92
+abs_diff: 1/23552
+possible_order: 92
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101011000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 107/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 107/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 21/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 1/384
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 51/61
+abs_diff: 1/7808
+possible_order: 61
+The possible order is odd or 0
+-----------------------------------
+4th appro: 107/128
+abs_diff: 0
+possible_order: 128
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010101000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 21/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 21/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 1/384
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 10/61
+abs_diff: 1/7808
+possible_order: 61
+The possible order is odd or 0
+-----------------------------------
+3th appro: 21/128
+abs_diff: 0
+possible_order: 128
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0101010010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 169/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 169/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 5/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 33/100
+abs_diff: 1/12800
+possible_order: 100
+Violate rule (1)
+-----------------------------------
+3th appro: 34/103
+abs_diff: 1/52736
+possible_order: 103
+The possible order is odd or 0
+-----------------------------------
+4th appro: 169/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101011001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 857/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 857/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 167/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 11/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 36/43
+abs_diff: 13/44032
+possible_order: 43
+The possible order is odd or 0
+-----------------------------------
+4th appro: 41/49
+abs_diff: 9/50176
+possible_order: 49
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101010001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 849/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 849/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 175/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 149/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 13/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 29/35
+abs_diff: 19/35840
+possible_order: 35
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101011001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 345/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 345/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 167/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 11/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 31/92
+abs_diff: 1/23552
+possible_order: 92
+Violate rule (1)
+-----------------------------------
+4th appro: 63/187
+abs_diff: 3/191488
+possible_order: 187
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010101110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 343/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 343/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 169/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 5/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 67/100
+abs_diff: 1/12800
+possible_order: 100
+Violate rule (1)
+-----------------------------------
+4th appro: 69/103
+abs_diff: 1/52736
+possible_order: 103
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010101110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 87/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 87/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 77/2560
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 5/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 8/47
+abs_diff: 7/24064
+possible_order: 47
+The possible order is odd or 0
+-----------------------------------
+4th appro: 9/53
+abs_diff: 3/27136
+possible_order: 53
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101011011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 347/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 347/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 165/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 17/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 20/59
+abs_diff: 7/60416
+possible_order: 59
+The possible order is odd or 0
+-----------------------------------
+4th appro: 41/121
+abs_diff: 3/123904
+possible_order: 121
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010101111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 175/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 175/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 149/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 13/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 6/35
+abs_diff: 19/35840
+possible_order: 35
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/41
+abs_diff: 7/41984
+possible_order: 41
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010100110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 339/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 339/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 173/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 83/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 7/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 47/71
+abs_diff: 5/36352
+possible_order: 71
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101011010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 173/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 173/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 83/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 7/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 24/71
+abs_diff: 5/36352
+possible_order: 71
+The possible order is odd or 0
+-----------------------------------
+4th appro: 25/74
+abs_diff: 1/18944
+possible_order: 74
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010110000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 11/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 11/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 9/320
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 1/192
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 5/29
+abs_diff: 1/1856
+possible_order: 29
+The possible order is odd or 0
+-----------------------------------
+4th appro: 11/64
+abs_diff: 0
+possible_order: 64
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101010001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 337/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 337/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 13/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 25/76
+abs_diff: 3/19456
+possible_order: 76
+Violate rule (1)
+-----------------------------------
+3th appro: 26/79
+abs_diff: 1/80896
+possible_order: 79
+The possible order is odd or 0
+-----------------------------------
+4th appro: 337/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010100000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 21/32
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 21/32
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 11/32
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 5/32
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 1/96
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 21/32
+abs_diff: 0
+possible_order: 32
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010110000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 43/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 43/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 21/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 1/192
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 43/64
+abs_diff: 0
+possible_order: 64
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1010100111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 679/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 679/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 345/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 167/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 11/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 61/92
+abs_diff: 1/23552
+possible_order: 92
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101010000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 21/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 21/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 1/192
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 21/64
+abs_diff: 0
+possible_order: 64
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0010110001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 177/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 177/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 139/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 19/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 4/23
+abs_diff: 25/23552
+possible_order: 23
+The possible order is odd or 0
+-----------------------------------
+4th appro: 5/29
+abs_diff: 13/29696
+possible_order: 29
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101001110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 167/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 167/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 11/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 15/46
+abs_diff: 1/11776
+possible_order: 46
+Violate rule (1)
+-----------------------------------
+3th appro: 76/233
+abs_diff: 1/119296
+possible_order: 233
+The possible order is odd or 0
+-----------------------------------
+4th appro: 167/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010100101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 165/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 165/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 17/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 4/25
+abs_diff: 29/25600
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/31
+abs_diff: 5/31744
+possible_order: 31
+The possible order is odd or 0
+-----------------------------------
+4th appro: 29/180
+abs_diff: 1/46080
+possible_order: 180
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101011100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 215/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 215/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 41/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 5/768
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 21/25
+abs_diff: 1/6400
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+4th appro: 215/256
+abs_diff: 0
+possible_order: 256
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010100100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 169/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 169/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 87/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 41/256
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 5/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 33/50
+abs_diff: 1/6400
+possible_order: 50
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101011101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 861/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 861/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 163/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 23/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 16/19
+abs_diff: 25/19456
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+4th appro: 21/25
+abs_diff: 21/25600
+possible_order: 25
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010100011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 163/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 163/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 23/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 3/19
+abs_diff: 25/19456
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+3th appro: 4/25
+abs_diff: 21/25600
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/44
+abs_diff: 1/11264
+possible_order: 44
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101001110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 423/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 423/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 89/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 67/2560
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 11/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 19/23
+abs_diff: 1/11776
+possible_order: 23
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010101111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 687/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 687/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 337/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 13/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 51/76
+abs_diff: 3/19456
+possible_order: 76
+Violate rule (1)
+-----------------------------------
+4th appro: 53/79
+abs_diff: 1/80896
+possible_order: 79
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101001111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 847/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 847/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 177/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 139/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 19/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 19/23
+abs_diff: 25/23552
+possible_order: 23
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101011100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 87/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 87/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 41/256
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 5/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 17/50
+abs_diff: 1/6400
+possible_order: 50
+Violate rule (1)
+-----------------------------------
+4th appro: 35/103
+abs_diff: 1/26368
+possible_order: 103
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010100110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 83/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 83/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 7/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 5/31
+abs_diff: 13/15872
+possible_order: 31
+The possible order is odd or 0
+-----------------------------------
+3th appro: 6/37
+abs_diff: 1/18944
+possible_order: 37
+The possible order is odd or 0
+-----------------------------------
+4th appro: 83/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101001001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 841/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 841/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 183/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 109/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 37/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 9/11
+abs_diff: 35/11264
+possible_order: 11
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010100101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 677/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 677/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 347/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 165/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 17/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 39/59
+abs_diff: 7/60416
+possible_order: 59
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010100011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 675/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 675/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 349/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 163/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 23/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 29/44
+abs_diff: 1/11264
+possible_order: 44
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0100110110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 155/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 155/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 47/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 3/10
+abs_diff: 7/2560
+possible_order: 10
+Violate rule (2)
+-----------------------------------
+3th appro: 10/33
+abs_diff: 5/16896
+possible_order: 33
+The possible order is odd or 0
+-----------------------------------
+4th appro: 23/76
+abs_diff: 1/9728
+possible_order: 76
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101011110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 431/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 431/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 81/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 13/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 16/19
+abs_diff: 3/9728
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+4th appro: 133/158
+abs_diff: 1/40448
+possible_order: 158
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010111000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 23/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 23/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 13/640
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 5/384
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 2/11
+abs_diff: 3/1408
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/39
+abs_diff: 1/4992
+possible_order: 39
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101001101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 845/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 845/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 179/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 129/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 25/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 14/17
+abs_diff: 29/17408
+possible_order: 17
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101101101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 877/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 877/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 147/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 71/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 6/7
+abs_diff: 5/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+4th appro: 173/202
+abs_diff: 1/103424
+possible_order: 202
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101010000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 53/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 53/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 11/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 9/320
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 1/192
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 24/29
+abs_diff: 1/1856
+possible_order: 29
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101011101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 349/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 349/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 163/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 23/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 15/44
+abs_diff: 1/11264
+possible_order: 44
+Violate rule (1)
+-----------------------------------
+4th appro: 76/223
+abs_diff: 3/228352
+possible_order: 223
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101011010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 429/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 429/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 83/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 7/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 26/31
+abs_diff: 13/15872
+possible_order: 31
+The possible order is odd or 0
+-----------------------------------
+4th appro: 31/37
+abs_diff: 1/18944
+possible_order: 37
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010110011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 179/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 179/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 129/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 25/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 3/17
+abs_diff: 29/17408
+possible_order: 17
+The possible order is odd or 0
+-----------------------------------
+4th appro: 4/23
+abs_diff: 21/23552
+possible_order: 23
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101110010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 185/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 185/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 71/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 43/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 4/11
+abs_diff: 13/5632
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 13/36
+abs_diff: 1/4608
+possible_order: 36
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101001100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 83/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 83/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 7/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 11/34
+abs_diff: 3/4352
+possible_order: 34
+Violate rule (1)
+-----------------------------------
+3th appro: 12/37
+abs_diff: 1/9472
+possible_order: 37
+The possible order is odd or 0
+-----------------------------------
+4th appro: 83/256
+abs_diff: 0
+possible_order: 256
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0011100111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 231/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 231/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/4
+abs_diff: 25/1024
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+2th appro: 2/9
+abs_diff: 31/9216
+possible_order: 9
+The possible order is odd or 0
+-----------------------------------
+3th appro: 7/31
+abs_diff: 7/31744
+possible_order: 31
+The possible order is odd or 0
+-----------------------------------
+4th appro: 30/133
+abs_diff: 3/136192
+possible_order: 133
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010100010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 81/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 81/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 13/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 3/19
+abs_diff: 3/9728
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+3th appro: 25/158
+abs_diff: 1/40448
+possible_order: 158
+Violate rule (1)
+-----------------------------------
+4th appro: 28/177
+abs_diff: 1/90624
+possible_order: 177
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1011000001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 705/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 705/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 319/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 67/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 9/13
+abs_diff: 51/13312
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+4th appro: 11/16
+abs_diff: 1/1024
+possible_order: 16
+Violate rule (2)
++++++++++++++++++++++++++++++++++++
+res: 1111100010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 497/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 497/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 15/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 33/34
+abs_diff: 1/8704
+possible_order: 34
+Violate rule (1)
+-----------------------------------
+3th appro: 232/239
+abs_diff: 1/122368
+possible_order: 239
+The possible order is odd or 0
+-----------------------------------
+4th appro: 497/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010100001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 673/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 673/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 351/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 161/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 29/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 23/35
+abs_diff: 3/35840
+possible_order: 35
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010110111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 183/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 183/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 109/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 37/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 2/11
+abs_diff: 35/11264
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 5/28
+abs_diff: 1/7168
+possible_order: 28
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101110100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 221/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 221/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 35/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 6/7
+abs_diff: 11/1792
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 19/22
+abs_diff: 1/2816
+possible_order: 22
+Violate rule (1)
+-----------------------------------
+4th appro: 101/117
+abs_diff: 1/29952
+possible_order: 117
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010110001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 689/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 689/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 335/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 19/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 35/52
+abs_diff: 3/13312
+possible_order: 52
+Violate rule (1)
+-----------------------------------
+4th appro: 37/55
+abs_diff: 7/56320
+possible_order: 55
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010011111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 671/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 671/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 353/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 159/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 35/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 19/29
+abs_diff: 3/29696
+possible_order: 29
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1100101000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 101/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 101/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 27/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 3/4
+abs_diff: 5/128
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+3th appro: 4/5
+abs_diff: 7/640
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+4th appro: 11/14
+abs_diff: 3/896
+possible_order: 14
+Violate rule (2)
++++++++++++++++++++++++++++++++++++
+res: 1010011101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 669/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 669/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 355/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 157/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 41/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 15/23
+abs_diff: 27/23552
+possible_order: 23
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101100001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 865/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 865/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 159/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 35/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 11/13
+abs_diff: 19/13312
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+4th appro: 38/45
+abs_diff: 13/46080
+possible_order: 45
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010111111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 703/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 703/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 321/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 61/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 11/16
+abs_diff: 1/1024
+possible_order: 16
+Violate rule (2)
+-----------------------------------
+4th appro: 35/51
+abs_diff: 13/52224
+possible_order: 51
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1100000100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 193/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 193/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 63/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 3/4
+abs_diff: 1/256
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+3th appro: 46/61
+abs_diff: 3/15616
+possible_order: 61
+The possible order is odd or 0
+-----------------------------------
+4th appro: 49/65
+abs_diff: 1/16640
+possible_order: 65
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 13/16
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 13/16
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 3/16
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 1/80
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 13/16
+abs_diff: 0
+possible_order: 16
+Factors: 3, 7
++++++++++++++++++++++++++++++++++++
+res: 1011100001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 737/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 737/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 287/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 163/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 3/4
+abs_diff: 31/1024
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+4th appro: 5/7
+abs_diff: 39/7168
+possible_order: 7
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1111001100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 243/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 243/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 13/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 18/19
+abs_diff: 9/4864
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+3th appro: 19/20
+abs_diff: 1/1280
+possible_order: 20
+Violate rule (2)
+-----------------------------------
+4th appro: 56/59
+abs_diff: 1/15104
+possible_order: 59
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1111101111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 1007/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 1007/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 17/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 59/60
+abs_diff: 1/15360
+possible_order: 60
+Violate rule (1)
+-----------------------------------
+3th appro: 237/241
+abs_diff: 1/246784
+possible_order: 241
+The possible order is odd or 0
+-----------------------------------
+4th appro: 1007/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101101110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 439/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 439/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 73/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 6/7
+abs_diff: 1/3584
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 439/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0101011111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 351/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 351/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 161/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 29/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 12/35
+abs_diff: 3/35840
+possible_order: 35
+The possible order is odd or 0
+-----------------------------------
+4th appro: 109/318
+abs_diff: 1/162816
+possible_order: 318
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101001101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 333/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 333/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 25/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 13/40
+abs_diff: 1/5120
+possible_order: 40
+Violate rule (1)
+-----------------------------------
+3th appro: 40/123
+abs_diff: 1/125952
+possible_order: 123
+The possible order is odd or 0
+-----------------------------------
+4th appro: 333/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101000110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 163/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 163/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 23/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 7/22
+abs_diff: 1/5632
+possible_order: 22
+Violate rule (1)
+-----------------------------------
+3th appro: 78/245
+abs_diff: 1/125440
+possible_order: 245
+The possible order is odd or 0
+-----------------------------------
+4th appro: 163/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101100111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 871/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 871/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 153/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 53/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 6/7
+abs_diff: 47/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+4th appro: 17/20
+abs_diff: 3/5120
+possible_order: 20
+Violate rule (2)
++++++++++++++++++++++++++++++++++++
+res: 0101001111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 335/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 335/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 19/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 17/52
+abs_diff: 3/13312
+possible_order: 52
+Violate rule (1)
+-----------------------------------
+3th appro: 18/55
+abs_diff: 7/56320
+possible_order: 55
+The possible order is odd or 0
+-----------------------------------
+4th appro: 35/107
+abs_diff: 5/109568
+possible_order: 107
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010010010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 329/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 329/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 183/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 73/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 37/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/11
+abs_diff: 35/5632
+possible_order: 11
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0100110011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 307/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 307/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 103/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/7
+abs_diff: 101/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 3/10
+abs_diff: 1/5120
+possible_order: 10
+Factors: 3, 7
++++++++++++++++++++++++++++++++++++
+res: 0010110100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 45/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 45/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 31/1280
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 7/768
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 3/17
+abs_diff: 3/4352
+possible_order: 17
+The possible order is odd or 0
+-----------------------------------
+4th appro: 13/74
+abs_diff: 1/9472
+possible_order: 74
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1110001000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 113/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 113/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 15/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 7/8
+abs_diff: 1/128
+possible_order: 8
+Violate rule (2)
+-----------------------------------
+3th appro: 8/9
+abs_diff: 7/1152
+possible_order: 9
+The possible order is odd or 0
+-----------------------------------
+4th appro: 15/17
+abs_diff: 1/2176
+possible_order: 17
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010111101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 189/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 189/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 79/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/11
+abs_diff: 31/11264
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/27
+abs_diff: 17/27648
+possible_order: 27
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/38
+abs_diff: 7/19456
+possible_order: 38
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101000110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 419/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 419/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 93/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 47/2560
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 23/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 9/11
+abs_diff: 1/5632
+possible_order: 11
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101100111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 359/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 359/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 153/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 53/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 6/17
+abs_diff: 41/17408
+possible_order: 17
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/20
+abs_diff: 3/5120
+possible_order: 20
+Violate rule (2)
++++++++++++++++++++++++++++++++++++
+res: 0010011101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 157/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 157/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 41/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 1/7
+abs_diff: 75/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 2/13
+abs_diff: 7/13312
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+4th appro: 21/137
+abs_diff: 5/140288
+possible_order: 137
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010110101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 181/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 181/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 119/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 31/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 2/11
+abs_diff: 57/11264
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 3/17
+abs_diff: 5/17408
+possible_order: 17
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0011011110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 111/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 111/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/4
+abs_diff: 17/512
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+2th appro: 1/5
+abs_diff: 43/2560
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 2/9
+abs_diff: 25/4608
+possible_order: 9
+The possible order is odd or 0
+-----------------------------------
+4th appro: 3/14
+abs_diff: 9/3584
+possible_order: 14
+Violate rule (2)
++++++++++++++++++++++++++++++++++++
+res: 1010111001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 697/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 697/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 327/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 43/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 15/22
+abs_diff: 13/11264
+possible_order: 22
+Violate rule (1)
+-----------------------------------
+4th appro: 17/25
+abs_diff: 17/25600
+possible_order: 25
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010011000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 83/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 83/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 45/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 19/128
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 7/384
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 11/17
+abs_diff: 3/2176
+possible_order: 17
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010110100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 173/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 173/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 83/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 7/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 23/34
+abs_diff: 3/4352
+possible_order: 34
+Violate rule (1)
+-----------------------------------
+4th appro: 25/37
+abs_diff: 1/9472
+possible_order: 37
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1011111110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 383/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 383/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 129/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 125/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 3/4
+abs_diff: 1/512
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+4th appro: 95/127
+abs_diff: 1/65024
+possible_order: 127
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0010011111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 159/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 159/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 35/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 2/13
+abs_diff: 19/13312
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+3th appro: 7/45
+abs_diff: 13/46080
+possible_order: 45
+The possible order is odd or 0
+-----------------------------------
+4th appro: 9/58
+abs_diff: 3/29696
+possible_order: 58
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010110011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 691/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 691/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 333/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 25/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 27/40
+abs_diff: 1/5120
+possible_order: 40
+Violate rule (1)
+-----------------------------------
+4th appro: 83/123
+abs_diff: 1/125952
+possible_order: 123
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101111001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 889/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 889/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 135/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 6/7
+abs_diff: 79/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 7/8
+abs_diff: 7/1024
+possible_order: 8
+Violate rule (2)
+-----------------------------------
+4th appro: 13/15
+abs_diff: 23/15360
+possible_order: 15
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101100000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 11/32
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 11/32
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 5/32
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 1/96
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 11/32
+abs_diff: 0
+possible_order: 32
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1101111101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 893/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 893/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 131/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 6/7
+abs_diff: 107/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 7/8
+abs_diff: 3/1024
+possible_order: 8
+Violate rule (2)
+-----------------------------------
+4th appro: 34/39
+abs_diff: 11/39936
+possible_order: 39
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010111000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 87/128
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 87/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 41/128
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 5/384
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 17/25
+abs_diff: 1/3200
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+4th appro: 87/128
+abs_diff: 0
+possible_order: 128
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010110010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 89/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 89/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 67/2560
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 11/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 4/23
+abs_diff: 1/11776
+possible_order: 23
+The possible order is odd or 0
+-----------------------------------
+4th appro: 89/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010011110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 79/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 79/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/6
+abs_diff: 19/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+2th appro: 2/13
+abs_diff: 3/6656
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+3th appro: 25/162
+abs_diff: 1/41472
+possible_order: 162
+Violate rule (1)
+-----------------------------------
+4th appro: 27/175
+abs_diff: 1/89600
+possible_order: 175
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0011010000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 13/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 13/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/4
+abs_diff: 3/64
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+2th appro: 1/5
+abs_diff: 1/320
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 13/64
+abs_diff: 0
+possible_order: 64
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1101011111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 863/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 863/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 161/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 29/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 11/13
+abs_diff: 45/13312
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+4th appro: 16/19
+abs_diff: 13/19456
+possible_order: 19
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0000110111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 55/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 55/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/18
+abs_diff: 17/9216
+possible_order: 18
+Violate rule (2)
+-----------------------------------
+2th appro: 1/19
+abs_diff: 21/19456
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+3th appro: 2/37
+abs_diff: 13/37888
+possible_order: 37
+The possible order is odd or 0
+-----------------------------------
+4th appro: 3/56
+abs_diff: 1/7168
+possible_order: 56
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101111110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 191/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 191/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 65/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 61/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 3/8
+abs_diff: 1/512
+possible_order: 8
+Violate rule (2)
+-----------------------------------
+4th appro: 22/59
+abs_diff: 5/30208
+possible_order: 59
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010110010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 345/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 345/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 167/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 11/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 31/46
+abs_diff: 1/11776
+possible_order: 46
+Violate rule (1)
+-----------------------------------
+4th appro: 157/233
+abs_diff: 1/119296
+possible_order: 233
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010011110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 335/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 335/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 177/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 79/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 19/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 17/26
+abs_diff: 3/6656
+possible_order: 26
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1100001001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 777/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 777/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 247/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 3/4
+abs_diff: 9/1024
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+3th appro: 19/25
+abs_diff: 31/25600
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+4th appro: 22/29
+abs_diff: 5/29696
+possible_order: 29
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101000100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 209/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 209/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 47/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 21/1280
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 9/11
+abs_diff: 5/2816
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 40/49
+abs_diff: 1/12544
+possible_order: 49
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101101010
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 437/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 437/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 75/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 31/1536
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 6/7
+abs_diff: 13/3584
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+4th appro: 29/34
+abs_diff: 5/8704
+possible_order: 34
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0010111001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 185/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 185/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/5
+abs_diff: 99/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/6
+abs_diff: 43/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 2/11
+abs_diff: 13/11264
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 13/72
+abs_diff: 1/9216
+possible_order: 72
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0101100001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 353/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 353/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 159/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 35/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 10/29
+abs_diff: 3/29696
+possible_order: 29
+The possible order is odd or 0
+-----------------------------------
+4th appro: 111/322
+abs_diff: 1/164864
+possible_order: 322
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010010011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 659/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 659/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 365/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 147/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 71/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 9/14
+abs_diff: 5/7168
+possible_order: 14
+Violate rule (2)
++++++++++++++++++++++++++++++++++++
+res: 0000110110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 27/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 27/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/18
+abs_diff: 13/4608
+possible_order: 18
+Violate rule (2)
+-----------------------------------
+2th appro: 1/19
+abs_diff: 1/9728
+possible_order: 19
+The possible order is odd or 0
+-----------------------------------
+3th appro: 27/512
+abs_diff: 0
+possible_order: 512
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1010010001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 657/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 657/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 367/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 145/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 77/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/11
+abs_diff: 59/11264
+possible_order: 11
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1000010000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 33/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 33/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 31/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 1/64
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 16/31
+abs_diff: 1/1984
+possible_order: 31
+The possible order is odd or 0
+-----------------------------------
+4th appro: 33/64
+abs_diff: 0
+possible_order: 64
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 0100111110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 159/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 159/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 35/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/13
+abs_diff: 19/6656
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/16
+abs_diff: 1/512
+possible_order: 16
+Violate rule (2)
+-----------------------------------
+4th appro: 9/29
+abs_diff: 3/14848
+possible_order: 29
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0001100000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 3/32
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 3/32
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/10
+abs_diff: 1/160
+possible_order: 10
+Violate rule (2)
+-----------------------------------
+2th appro: 1/11
+abs_diff: 1/352
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+3th appro: 3/32
+abs_diff: 0
+possible_order: 32
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 1011000100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 177/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 177/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 79/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 19/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 9/13
+abs_diff: 3/3328
+possible_order: 13
+The possible order is odd or 0
+-----------------------------------
+4th appro: 56/81
+abs_diff: 1/20736
+possible_order: 81
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0110010111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 407/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 407/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 105/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 197/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 2/5
+abs_diff: 13/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+4th appro: 31/78
+abs_diff: 1/39936
+possible_order: 78
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1101000101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 837/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 837/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 187/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 89/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 9/11
+abs_diff: 9/11264
+possible_order: 11
+The possible order is odd or 0
+-----------------------------------
+4th appro: 85/104
+abs_diff: 1/13312
+possible_order: 104
+Violate rule (1)
++++++++++++++++++++++++++++++++++++
+res: 1010010111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 663/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 663/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 361/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 151/1024
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 59/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 11/17
+abs_diff: 7/17408
+possible_order: 17
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101011011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 859/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 859/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 165/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 5/6
+abs_diff: 17/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+3th appro: 21/25
+abs_diff: 29/25600
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+4th appro: 26/31
+abs_diff: 5/31744
+possible_order: 31
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101000111
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 327/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 327/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/3
+abs_diff: 43/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+2th appro: 7/22
+abs_diff: 13/11264
+possible_order: 22
+Violate rule (1)
+-----------------------------------
+3th appro: 8/25
+abs_diff: 17/25600
+possible_order: 25
+The possible order is odd or 0
+-----------------------------------
+4th appro: 15/47
+abs_diff: 9/48128
+possible_order: 47
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1011011001
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 729/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 729/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 295/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 2/3
+abs_diff: 139/3072
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/7
+abs_diff: 17/7168
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+4th appro: 42/59
+abs_diff: 3/60416
+possible_order: 59
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101001100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 211/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 211/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 45/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 31/1280
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 7/768
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 14/17
+abs_diff: 3/4352
+possible_order: 17
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 0101011110
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 175/512
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 175/512
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 81/512
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+2th appro: 1/3
+abs_diff: 13/1536
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+3th appro: 13/38
+abs_diff: 3/9728
+possible_order: 38
+Violate rule (1)
+-----------------------------------
+4th appro: 27/79
+abs_diff: 1/40448
+possible_order: 79
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101001011
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 843/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 843/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 181/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 4/5
+abs_diff: 119/5120
+possible_order: 5
+The possible order is odd or 0
+-----------------------------------
+3th appro: 5/6
+abs_diff: 31/3072
+possible_order: 6
+Violate rule (2)
+-----------------------------------
+4th appro: 9/11
+abs_diff: 57/11264
+possible_order: 11
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1010001100
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 163/256
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 163/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 93/256
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 1/2
+abs_diff: 35/256
+possible_order: 2
+Violate rule (2)
+-----------------------------------
+3th appro: 2/3
+abs_diff: 23/768
+possible_order: 3
+The possible order is odd or 0
+-----------------------------------
+4th appro: 7/11
+abs_diff: 1/2816
+possible_order: 11
+The possible order is odd or 0
++++++++++++++++++++++++++++++++++++
+res: 1101110000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 55/64
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 55/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1
+abs_diff: 9/64
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+2th appro: 6/7
+abs_diff: 1/448
+possible_order: 7
+The possible order is odd or 0
+-----------------------------------
+3th appro: 55/64
+abs_diff: 0
+possible_order: 64
+Violate rule (1)
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 0011111101
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 253/1024
+N = 21, a=5
+-----------------------------------
+0th appro: 0
+abs_diff: 253/1024
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/4
+abs_diff: 3/1024
+possible_order: 4
+Violate rule (2)
+-----------------------------------
+2th appro: 21/85
+abs_diff: 1/87040
+possible_order: 85
+The possible order is odd or 0
+-----------------------------------
+3th appro: 253/1024
+abs_diff: 0
+possible_order: 1024
+Violate rule (1)
+-----------------------------------
+
+***********************************
+Success res: ['1000000000', '1101000000', '0100110011']
+***********************************
