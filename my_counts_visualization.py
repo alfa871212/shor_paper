@@ -169,11 +169,11 @@ def plot_histogram(data, figsize=(7, 5), color=None, number_to_keep=None,
                     if height >= 1e-3:
                         ax.text(rec.get_x() + rec.get_width() / 2., 1.05 * height,
                                 '%.3f' % float(height),
-                                ha='center', va='bottom', zorder=3,fontsize=18)
+                                ha='center', va='bottom', zorder=3, fontsize=18)
                     else:
                         ax.text(rec.get_x() + rec.get_width() / 2., 1.05 * height,
                                 '0',
-                                ha='center', va='bottom', zorder=3,fontsize=16)
+                                ha='center', va='bottom', zorder=3, fontsize=16)
 
     # add some text for labels, title, and axes ticks
     ax.set_ylabel('Probabilities', fontsize=24)
@@ -187,7 +187,7 @@ def plot_histogram(data, figsize=(7, 5), color=None, number_to_keep=None,
         tick.label.set_fontsize(20)
     plt.grid(which='major', axis='y', zorder=0, linestyle='--')
     if title:
-        plt.title(title,size=25)
+        plt.title(title, size=25)
 
     if legend:
         ax.legend(loc='upper left', bbox_to_anchor=(1.01, 1.0), ncol=1,
@@ -223,7 +223,8 @@ def _plot_histogram_data(data, labels, number_to_keep):
     for execution in data:
         if number_to_keep is not None:
             data_temp = dict(Counter(execution).most_common(number_to_keep))
-            data_temp["rest"] = sum(execution.values()) - sum(data_temp.values())
+            data_temp["rest"] = sum(execution.values()) - \
+                sum(data_temp.values())
             execution = data_temp
         values = []
         for key in labels:
