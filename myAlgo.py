@@ -399,15 +399,15 @@ def shorNormal_circuit(N, a, args):
     # initialize
     qc.h(up)
     qc.x(down[n-1])
-    # control-unitary gate application
-    for i in range(0, 2*n):
-        gate = cu_a(n, a**(2**i), N, print_qc=False)
-        qc.append(gate, qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
-    # rest circuit construction
-    qftgate = myQFT(2*n, inverse=True)
-    qc.append(qftgate, qargs=up)
-    for i in range(0, 2*n):
-        qc.measure(up[i], cr[2*n-1-i])
+    #control-unitary gate application
+    for i in range(0,2*n):
+        gate = cu_a(n,a**(2**i),N,print_qc=False)
+        qc.append(gate,qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
+    #rest circuit construction
+    qftgate = myQFT(2*n,inverse=True)
+    qc.append(qftgate,qargs=up)
+    for i in range(0,2*n):
+        qc.measure(up[i],cr[2*n-1-i])
     return qc
 
 
@@ -426,20 +426,18 @@ def shorNormal(N, a, args=None):
     # initialize
     qc.h(up)
     qc.x(down[n-1])
-    # control-unitary gate application
-    for i in range(0, 2*n):
-        gate = cu_a(n, a**(2**i), N, print_qc=False)
-        qc.append(gate, qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
-    # rest circuit construction
-    qftgate = myQFT(2*n, inverse=True)
-    qc.append(qftgate, qargs=up)
-    for i in range(0, 2*n):
-        qc.measure(up[i], cr[2*n-1-i])
-    # ===========================================================================
-    # Result formation
-    if args == None:
-        return qc
-
+    #control-unitary gate application
+    for i in range(0,2*n):
+        gate = cu_a(n,a**(2**i),N,print_qc=False)
+        qc.append(gate,qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
+    #rest circuit construction
+    qftgate = myQFT(2*n,inverse=True)
+    qc.append(qftgate,qargs=up)
+    for i in range(0,2*n):
+        qc.measure(up[i],cr[2*n-1-i])
+    #===========================================================================
+    #Result formation
+    
     if args.draw:
         qcpath = f'./normal/circuit'
         if not os.path.exists(qcpath):
