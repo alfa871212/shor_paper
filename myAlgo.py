@@ -399,15 +399,15 @@ def shorNormal_circuit(N, a, args):
     # initialize
     qc.h(up)
     qc.x(down[n-1])
-    #control-unitary gate application
-    for i in range(0,2*n):
-        gate = cu_a(n,a**(2**i),N,print_qc=False)
-        qc.append(gate,qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
-    #rest circuit construction
-    qftgate = myQFT(2*n,inverse=True)
-    qc.append(qftgate,qargs=up)
-    for i in range(0,2*n):
-        qc.measure(up[i],cr[2*n-1-i])
+    # control-unitary gate application
+    for i in range(0, 2*n):
+        gate = cu_a(n, a**(2**i), N, print_qc=False)
+        qc.append(gate, qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
+    # rest circuit construction
+    qftgate = myQFT(2*n, inverse=True)
+    qc.append(qftgate, qargs=up)
+    for i in range(0, 2*n):
+        qc.measure(up[i], cr[2*n-1-i])
     return qc
 
 
@@ -426,26 +426,28 @@ def shorNormal(N, a, args=None):
     # initialize
     qc.h(up)
     qc.x(down[n-1])
-    #control-unitary gate application
-    for i in range(0,2*n):
-        gate = cu_a(n,a**(2**i),N,print_qc=False)
-        qc.append(gate,qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
-    #rest circuit construction
-    qftgate = myQFT(2*n,inverse=True)
-    qc.append(qftgate,qargs=up)
-    for i in range(0,2*n):
-        qc.measure(up[i],cr[2*n-1-i])
-    #===========================================================================
-    #Result formation
-    
+    # control-unitary gate application
+    for i in range(0, 2*n):
+        gate = cu_a(n, a**(2**i), N, print_qc=False)
+        qc.append(gate, qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
+    # rest circuit construction
+    qftgate = myQFT(2*n, inverse=True)
+    qc.append(qftgate, qargs=up)
+    for i in range(0, 2*n):
+        qc.measure(up[i], cr[2*n-1-i])
+    # ===========================================================================
+    # Result formation
+    if args == None:
+        return qc
     if args.draw:
         qcpath = f'./normal/circuit'
         if not os.path.exists(qcpath):
             os.makedirs(qcpath)
         circuit_drawer(qc, output='mpl',
                        filename=f'./normal/circuit/{N}_{a}.png', scale=0.6)
-
+    tmp = sim.gpuSim(qc)
     res = sim.mySim(qc, args)
+
     lis = sim.sort_by_prob(res)
     if args.output:
         respath = f'./normal/result'
@@ -453,6 +455,8 @@ def shorNormal(N, a, args=None):
             os.makedirs(respath)
         plot_histogram(res, figsize=(10, 10), title=f'N={N} a={a} result(Nor)').savefig(
             respath+f'/{N}_{a}_res.png')
+    path = f'./normal/result/{N}_{a}.csv'
+
     with open(f'./normal/result/{N}_{a}.csv', 'w') as out:
         csv_out = csv.writer(out)
         for i in lis:

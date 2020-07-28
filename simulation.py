@@ -1,4 +1,5 @@
 from qiskit.providers.aer.noise import NoiseModel
+from qiskit_qcgpu_provider import QCGPUProvider
 import argparse
 import os
 import matplotlib.pyplot as plt
@@ -72,6 +73,7 @@ def mySim(cir, args, method='qasm'):
         backend = provider.get_backend('ibmq_cambridge')
     else:
         if args.simulation == 'local':
+
             backend = qk.Aer.get_backend(sim_type)
         elif args.simulation == 'ibmq':
             backend = provider.get_backend('ibmq_qasm_simulator')
@@ -80,13 +82,17 @@ def mySim(cir, args, method='qasm'):
             backend = qk.Aer.get_backend(sim_type)
 
     try:
-        sim_res = qk.execute(cir, backend, shots=8192, optimization_level=1)
+        beg = time.time()
+        sim_res = qk.execute(cir, backend, shots=8192,
+                             optimization_level=1)
 
         qk.tools.job_monitor(sim_res)
         sim_result = sim_res.result()
         job_uid = sim_res.job_id()
 
         counts_result = sim_result.get_counts()
+        end = time.time()
+        print(end-beg)
     except Exception as e:
         print(e)
         if e == Exception('IBMQJobFailureError'):
@@ -94,6 +100,21 @@ def mySim(cir, args, method='qasm'):
 
     # print(counts_result)
     return counts_result
+
+
+def gpuSim(cir):
+
+    qcgpu_backend = QCGPUProvider().get_backend('qasm_simulator')
+
+    beg = time.time()
+    # Compile and run the Quantum circuit on a simulator backend
+    job_sim = qk.execute(qc, qcgpu_backend)
+    sim_result = job_sim.result()
+
+    # Show the results
+    # print(result_sim.get_counts())
+    end = time.time()
+    print(end-beg)
 
 
 def process_command():

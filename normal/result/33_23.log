@@ -1,0 +1,39 @@
+./normal/result/33_23.csv
++++++++++++++++++++++++++++++++++++
+res: 000000000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 0
+N = 33, a=23
+-----------------------------------
+0th appro: 0
+abs_diff: 0
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+
++++++++++++++++++++++++++++++++++++
+res: 100000000000
+===================================
+CF algorithm rule:
+(1) appro.denominator < N
+(2) abs(appro-frac) < threshold
+===================================
+Analyzing fraction: 1/2
+N = 33, a=23
+-----------------------------------
+0th appro: 0
+abs_diff: 1/2
+possible_order: 1
+The possible order is odd or 0
+-----------------------------------
+1th appro: 1/2
+abs_diff: 0
+possible_order: 2
+Factors: 3, 11
+***********************************
+Success res: ['100000000000']
+***********************************

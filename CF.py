@@ -1,10 +1,21 @@
 from sympy.ntheory.continued_fraction import *
+from sympy.ntheory import n_order
 import numpy as np
 import math
 import sys
 import os
 import argparse
 import csv
+
+
+def better_a(m):
+    ord_lis = []
+    idx_lis = []
+    for a in range(2, m):
+        if math.gcd(a, m) == 1:
+            ord_lis.append(n_order(a, m))
+            idx_lis.append(a)
+    return idx_lis[ord_lis.index(min(ord_lis))]
 
 
 def args_parse():
