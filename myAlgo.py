@@ -446,7 +446,9 @@ def shorNormal(N, a, args=None):
         circuit_drawer(qc, output='mpl',
                        filename=f'./normal/circuit/{N}_{a}.png', scale=0.6)
     tmp = sim.gpuSim(qc)
-    res = sim.mySim(qc, args)
+    tmp2 = sim.cpuSim(qc)
+
+    #res = sim.mySim(qc, args)
 
     lis = sim.sort_by_prob(res)
     if args.output:

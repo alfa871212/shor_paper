@@ -103,18 +103,36 @@ def mySim(cir, args, method='qasm'):
 
 
 def gpuSim(cir):
-
-    qcgpu_backend = QCGPUProvider().get_backend('qasm_simulator')
+    backend_options = {"method": "statevector_gpu"}
+    backend = qk.Aer.get_backend("qasm_simulator")
 
     beg = time.time()
     # Compile and run the Quantum circuit on a simulator backend
-    job_sim = qk.execute(qc, qcgpu_backend)
+    job_sim = qk.execute(cir, backend,
+                         backend_options=backend_options)
     sim_result = job_sim.result()
 
     # Show the results
     # print(result_sim.get_counts())
     end = time.time()
     print(end-beg)
+    print(sim_result)
+
+
+def cpuSim(cir):
+    backend_options = {"method": "statevector"}
+    backend = qk.Aer.get_backend("qasm_simulator")
+
+    beg = time.time()
+    # Compile and run the Quantum circuit on a simulator backend
+    job_sim = qk.execute(cir, backend, backend_options=backend_options)
+    sim_result = job_sim.result()
+
+    # Show the results
+    # print(result_sim.get_counts())
+    end = time.time()
+    print(end-beg)
+    print(sim_result)
 
 
 def process_command():
