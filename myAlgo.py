@@ -79,7 +79,26 @@ def test_adder_appro(a, b, n, appro, args):
     print("="*40)
 
 
-def test_adder(a, b, n):
+def test_adder_em(a, b, n):
+    qc = adder(a, b, n, 1)
+    backend = qiskit.Aer.get_backend('qasm_simulator')
+    rbackend = provider.get_backend('ibmq_cambridge')
+    noise_model = NoiseModel.from_backend(rbackend, gate_error=False)
+    job = qiskit.execute(meas_calibs, backend=backend,
+                         shots=1000, noise_model=noise_model)
+    cal_results = job.result()
+    meas_fitter = CompleteMeasFitter(
+        cal_results, state_labels, circlabel='mcal')
+    meas_filter = meas_fitter.filter
+
+    # Results with mitigation
+    mitigated_results = meas_filter.apply(results)
+    mitigated_counts = mitigated_results.get_counts(0)
+    plot_histogram([noisy_counts, mitigated_counts],
+                   legend=['noisy', 'mitigated'])
+
+
+def test_adder(a, b, n, args):
     if args.log:
         if not os.path.exists('adder/log'):
             os.makedirs('adder/log')
@@ -445,13 +464,10 @@ def shorNormal(N, a, args=None):
             os.makedirs(qcpath)
         circuit_drawer(qc, output='mpl',
                        filename=f'./normal/circuit/{N}_{a}.png', scale=0.6)
-    if args.simcmp:
-        gt = sim.gpuSim(qc)
-        ct = sim.cpuSim(qc)
-        #sim.timeCMP(gt,ct)
-        return
+    tmp = sim.gpuSim(qc)
+    tmp2 = sim.cpuSim(qc)
 
-    res = sim.mySim(qc, args)
+    #res = sim.mySim(qc, args)
 
     lis = sim.sort_by_prob(res)
     if args.output:
@@ -467,13 +483,6 @@ def shorNormal(N, a, args=None):
         for i in lis:
             csv_out.writerow(i)
 
-def create_a_array():
-    lis=[15,21,33,35,39]
-    a_lis=[]
-    from CF import better_a
-    for i in range(len(lis)):
-        a_lis.append(better_a(lis[i]))
-    return lis,a_lis
 
 def shorSequential(N, a, args=None):
     n = math.ceil(math.log(N, 2))

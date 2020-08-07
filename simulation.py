@@ -89,9 +89,9 @@ def mySim(cir, args, method='qasm'):
         else:
             backend_options = {"method": "statevector"}
         sim_res = qk.execute(cir, backend, shots=8192,
-                             optimization_level=1,backend_options=backend_options)
+                             optimization_level=1, backend_options=backend_options)
 
-        #qk.tools.job_monitor(sim_res)
+        # qk.tools.job_monitor(sim_res)
         sim_result = sim_res.result()
         job_uid = sim_res.job_id()
 
@@ -120,7 +120,7 @@ def gpuSim(cir):
     # Show the results
     print(sim_result.get_counts())
     end = time.time()
-    time_cost=np.round(end-beg,5)
+    time_cost = np.round(end-beg, 5)
     print(f"GPU sim time: {time_cost}")
     return time_cost
 
@@ -137,14 +137,15 @@ def cpuSim(cir):
     # Show the results
     print(sim_result.get_counts())
     end = time.time()
-    time_cost=np.round(end-beg,5)
+    time_cost = np.round(end-beg, 5)
     print(f"CPU sim time: {time_cost}")
     return time_cost
 
-def timeCMP(gtime,ctime):
-    if gtime<ctime:
+
+def timeCMP(gtime, ctime):
+    if gtime < ctime:
         print(f"The GPU is faster by {100-100*np.round((gtime/ctime),3)}%")
-    if gtime>=ctime:
+    if gtime >= ctime:
         print(f"The GPU is slower by {100-100*np.round((ctime/gtime),3)}%")
 
 
@@ -153,8 +154,8 @@ def process_command():
     method = parser.add_mutually_exclusive_group()
     method.add_argument('--simulation', '--sim', '-s', metavar='local/ibmq')
     method.add_argument('--real', '-r', action='store_true')
-    parser.add_argument('--simcmp',action='store_true')
-    parser.add_argument('--gpu',action='store_true')
+    parser.add_argument('--simcmp', action='store_true')
+    parser.add_argument('--gpu', action='store_true')
     gate = parser.add_mutually_exclusive_group(required=True)
     gate.add_argument('--adder', nargs=3, type=int, metavar=('a', 'b', 'n'))
     gate.add_argument('--phimod', nargs=4, type=int,
