@@ -1,10 +1,11 @@
 from qiskit.providers.aer.noise import NoiseModel
-from qiskit_qcgpu_provider import QCGPUProvider
+#from qiskit_qcgpu_provider import QCGPUProvider
 import argparse
 import os
 import matplotlib.pyplot as plt
 import time
 import qiskit as qk
+import numpy as np
 qk.IBMQ.load_account()
 
 
@@ -83,16 +84,20 @@ def mySim(cir, args, method='qasm'):
 
     try:
         beg = time.time()
+        if args.gpu:
+            backend_options = {"method": "statevector_gpu"}
+        else:
+            backend_options = {"method": "statevector"}
         sim_res = qk.execute(cir, backend, shots=8192,
-                             optimization_level=1)
+                             optimization_level=1,backend_options=backend_options)
 
-        qk.tools.job_monitor(sim_res)
+        #qk.tools.job_monitor(sim_res)
         sim_result = sim_res.result()
         job_uid = sim_res.job_id()
 
         counts_result = sim_result.get_counts()
         end = time.time()
-        print(end-beg)
+        print(f"Time cost: {end-beg} s")
     except Exception as e:
         print(e)
         if e == Exception('IBMQJobFailureError'):
@@ -113,10 +118,11 @@ def gpuSim(cir):
     sim_result = job_sim.result()
 
     # Show the results
-    # print(result_sim.get_counts())
+    print(sim_result.get_counts())
     end = time.time()
-    print(end-beg)
-    print(sim_result)
+    time_cost=np.round(end-beg,5)
+    print(f"GPU sim time: {time_cost}")
+    return time_cost
 
 
 def cpuSim(cir):
@@ -129,10 +135,17 @@ def cpuSim(cir):
     sim_result = job_sim.result()
 
     # Show the results
-    # print(result_sim.get_counts())
+    print(sim_result.get_counts())
     end = time.time()
-    print(end-beg)
-    print(sim_result)
+    time_cost=np.round(end-beg,5)
+    print(f"CPU sim time: {time_cost}")
+    return time_cost
+
+def timeCMP(gtime,ctime):
+    if gtime<ctime:
+        print(f"The GPU is faster by {100-100*np.round((gtime/ctime),3)}%")
+    if gtime>=ctime:
+        print(f"The GPU is slower by {100-100*np.round((ctime/gtime),3)}%")
 
 
 def process_command():
@@ -140,7 +153,8 @@ def process_command():
     method = parser.add_mutually_exclusive_group()
     method.add_argument('--simulation', '--sim', '-s', metavar='local/ibmq')
     method.add_argument('--real', '-r', action='store_true')
-
+    parser.add_argument('--simcmp',action='store_true')
+    parser.add_argument('--gpu',action='store_true')
     gate = parser.add_mutually_exclusive_group(required=True)
     gate.add_argument('--adder', nargs=3, type=int, metavar=('a', 'b', 'n'))
     gate.add_argument('--phimod', nargs=4, type=int,

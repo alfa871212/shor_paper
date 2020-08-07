@@ -445,10 +445,13 @@ def shorNormal(N, a, args=None):
             os.makedirs(qcpath)
         circuit_drawer(qc, output='mpl',
                        filename=f'./normal/circuit/{N}_{a}.png', scale=0.6)
-    tmp = sim.gpuSim(qc)
-    tmp2 = sim.cpuSim(qc)
+    if args.simcmp:
+        gt = sim.gpuSim(qc)
+        ct = sim.cpuSim(qc)
+        #sim.timeCMP(gt,ct)
+        return
 
-    #res = sim.mySim(qc, args)
+    res = sim.mySim(qc, args)
 
     lis = sim.sort_by_prob(res)
     if args.output:
@@ -464,6 +467,13 @@ def shorNormal(N, a, args=None):
         for i in lis:
             csv_out.writerow(i)
 
+def create_a_array():
+    lis=[15,21,33,35,39]
+    a_lis=[]
+    from CF import better_a
+    for i in range(len(lis)):
+        a_lis.append(better_a(lis[i]))
+    return lis,a_lis
 
 def shorSequential(N, a, args=None):
     n = math.ceil(math.log(N, 2))

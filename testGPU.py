@@ -9,7 +9,7 @@ import math
 from qiskit import ClassicalRegister, QuantumRegister, QuantumCircuit
 from qiskit import QiskitError, execute, Aer
 from myAlgo import shorNormal
-from qiskit_qcgpu_provider import QCGPUProvider
+#from qiskit_qcgpu_provider import QCGPUProvider
 
 
 # Benchmarking functions
