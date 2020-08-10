@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 import time
 import qiskit as qk
 import numpy as np
+import math
+from psutil import virtual_memory
+mem = virtual_memory()
+allo_mem = math.ceil(mem.available*0.9)
 qk.IBMQ.load_account()
 
 
@@ -91,7 +95,7 @@ def mySim(cir, args, method='qasm'):
         sim_res = qk.execute(cir, backend, shots=8192,
                              optimization_level=1, backend_options=backend_options)
 
-        # qk.tools.job_monitor(sim_res)
+        #qk.tools.job_monitor(sim_res)
         sim_result = sim_res.result()
         job_uid = sim_res.job_id()
 
@@ -108,20 +112,23 @@ def mySim(cir, args, method='qasm'):
 
 
 def gpuSim(cir):
-    backend_options = {"method": "statevector_gpu"}
+    
+    backend_options = {"method": "statevector_gpu","max_memory_mb":allo_mem}
     backend = qk.Aer.get_backend("qasm_simulator")
 
     beg = time.time()
     # Compile and run the Quantum circuit on a simulator backend
     job_sim = qk.execute(cir, backend,
                          backend_options=backend_options)
+    end = time.time()                    
     sim_result = job_sim.result()
 
     # Show the results
-    print(sim_result.get_counts())
-    end = time.time()
+    
+    
     time_cost = np.round(end-beg, 5)
     print(f"GPU sim time: {time_cost}")
+    print(sim_result.get_counts())
     return time_cost
 
 
@@ -135,7 +142,7 @@ def cpuSim(cir):
     sim_result = job_sim.result()
 
     # Show the results
-    print(sim_result.get_counts())
+    #print(sim_result.get_counts())
     end = time.time()
     time_cost = np.round(end-beg, 5)
     print(f"CPU sim time: {time_cost}")

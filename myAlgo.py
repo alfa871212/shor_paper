@@ -464,10 +464,10 @@ def shorNormal(N, a, args=None):
             os.makedirs(qcpath)
         circuit_drawer(qc, output='mpl',
                        filename=f'./normal/circuit/{N}_{a}.png', scale=0.6)
-    tmp = sim.gpuSim(qc)
-    tmp2 = sim.cpuSim(qc)
+    #tmp = sim.gpuSim(qc)
+    #tmp2 = sim.cpuSim(qc)
 
-    #res = sim.mySim(qc, args)
+    res = sim.mySim(qc, args)
 
     lis = sim.sort_by_prob(res)
     if args.output:
@@ -519,7 +519,7 @@ def shorSequential(N, a, args=None):
                        filename=f'./sequential/circuit/{N}_{a}.png', scale=0.6)
 
     res = sim.mySim(qc, args)
-    # print(res)
+    print(res)
     new_dict = {}
 
     for iter in list(res):

@@ -4,11 +4,11 @@ from qiskit.visualization import plot_histogram
 import simulation as sim
 import argparse
 import matplotlib.pyplot as plt
-args = sim.process_command()
+#args = sim.process_command()
 x = []
 gt_lis = []
 ct_lis = []
-for i in range(2, 30):
+for i in range(1, 29):
     x.append(i)
     qr = QuantumRegister(i)
     qc = QuantumCircuit(qr)
@@ -18,7 +18,7 @@ for i in range(2, 30):
     gt_lis.append(sim.gpuSim(qc))
     ct_lis.append(sim.cpuSim(qc))
 
-plt.plot(x, gt_lis)
-plt.plot(x, ct_lis)
+plt.plot(x, gt_lis,label='GPU')
+plt.plot(x, ct_lis,label='CPU')
 plt.legend()
 plt.savefig('qftbenchmark.png')

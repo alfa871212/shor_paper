@@ -11,10 +11,14 @@ For the access of the real quantum devices, you are recommended to register an I
 You should install qiskit ([Anaconda](https://www.anaconda.com/products/individual) environment preferred) to run my code on your machine or using https://quantum-computing.ibm.com/ instead.
 
 ```
-conda create --name yourenvname python=3.7
+conda create --name yourenvname python=3
 source activate yourenvname
 pip install qiskit
 pip install matplotlib #required for plotting
+#for CUDA support simulator
+pip install qiskit-aer-gpu
+(CUDA required)
+(Strongly recommended following the tutorial on tensorflow official site)
 ```
 ## Structure
 * [shor.py](https://github.com/alfa871212/shor_paper/blob/master/shor.py) is the main program.
