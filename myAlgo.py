@@ -484,6 +484,31 @@ def shorNormal(N, a, args=None):
             csv_out.writerow(i)
 
 
+def shorSequential_rev2(N, a):
+    n = math.ceil(math.log(N, 2))
+    ctrl = QuantumRegister(1, name='ctrl')
+    down = QuantumRegister(n, name='x')
+    down_b = QuantumRegister(n+1, name='b')
+    ancilla = QuantumRegister(1, name='ancilla')
+    cr = ClassicalRegister(2*n, name='cr')
+    c_aux = ClassicalRegister(1, name='caux')
+    qc = QuantumCircuit(ancilla, down_b, down, ctrl, cr, c_aux)
+    qc.x(down[0])
+    for i in range(2*n):
+        qc.x(ctrl).c_if(c_aux, 1)
+        neighbor_range = range(np.max([0, i - 2*n + 1]), 2*n - i - 1)
+        qc.h(ctrl)
+        gate = cu_a(n, a**(2**(2*n-1-i)), N)
+        qc.append(gate, qargs=ctrl[:]+down[:]+down_b[:]+ancilla[:])
+        qc.h(ctrl)
+        qc.measure(ctrl, c_aux)
+        qc.measure(ctrl, cr)
+        if neighbor_range != range(0, 0):
+            gate = myR2(i, neighbor_range, c_aux)
+            qc.append(gate, qargs=ctrl[:])
+    return qc
+
+
 def shorSequential(N, a, args=None):
     n = math.ceil(math.log(N, 2))
     ctrl = QuantumRegister(1, name='ctrl')

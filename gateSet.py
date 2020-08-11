@@ -8,7 +8,9 @@ import csv
 import simulation as sim
 from qiskit.aqua.utils.controlled_circuit import get_controlled_circuit
 from sympy import mod_inverse
-def myQFT(n,inverse=False):
+
+
+def myQFT(n, inverse=False):
     qr = QuantumRegister(n)
     gate = QFT(n, inverse=inverse, do_swaps=False).to_gate()
     gate.name = 'QFT'
@@ -275,17 +277,17 @@ def modinv(a, N):
 
 def cu_a(n, a, N, print_qc=False, save_fig=False):
     bitlen = n+1
-    qr_c =QuantumRegister(1,name='c')
-    qr_x = QuantumRegister(n,name='x')
-    qr_b_0=QuantumRegister(bitlen+1,name='b0')
-    qc = QuantumCircuit(qr_c,qr_x,qr_b_0)
-    a=a%N
-    ainv=modinv(a,N)
+    qr_c = QuantumRegister(1, name='c')
+    qr_x = QuantumRegister(n, name='x')
+    qr_b_0 = QuantumRegister(bitlen+1, name='b0')
+    qc = QuantumCircuit(qr_c, qr_x, qr_b_0)
+    a = a % N
+    ainv = modinv(a, N)
     #ainv = mod_inverse(a,N)
-    ainv=ainv%N
-    gate = cmult_a_mod_N(n,a,0,N,print_qc=False)
-    invgate = cmult_a_mod_N(n,ainv,0,N,print_qc=False).inverse()
-    qc.append(gate,qargs=qr_c[:]+qr_x[:]+qr_b_0[:])
+    ainv = ainv % N
+    gate = cmult_a_mod_N(n, a, 0, N, print_qc=False)
+    invgate = cmult_a_mod_N(n, ainv, 0, N, print_qc=False).inverse()
+    qc.append(gate, qargs=qr_c[:]+qr_x[:]+qr_b_0[:])
     for i in range(n):
         qc.cswap(qr_c, qr_x[i], qr_b_0[i+1])
     qc.append(invgate, qargs=qr_c[:]+qr_x[:]+qr_b_0[:])
@@ -385,6 +387,18 @@ def myR(i, neighbor_range, cr_lis):
     for j in neighbor_range:
         theta = math.pi/float(2**(j+1))
         gate = U1Gate(theta, i+(j+1)).c_if(cr_lis[i], 1)
+        qc.append(gate, qargs=qr[:])
+    gate = qc.to_gate()
+    gate.name = f'R_{i}'
+    return gate
+
+
+def myR2(i, neighbor_range, cr):
+    qr = QuantumRegister(1)
+    qc = QuantumCircuit(qr)
+    for j in neighbor_range:
+        theta = math.pi/float(2**(j+1))
+        gate = U1Gate(theta, i+(j+1)).c_if(cr, 1)
         qc.append(gate, qargs=qr[:])
     gate = qc.to_gate()
     gate.name = f'R_{i}'
