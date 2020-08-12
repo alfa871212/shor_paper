@@ -14,11 +14,11 @@ for i in range(len(prime_lis)):
                 n_lis.append(to_put)
 
 n_lis = sorted(n_lis)
-#print(n_lis)
+print(n_lis)
 a_lis=[]
 for i in n_lis:
     a_lis.append(better_a(i))
-#print(a_lis)
+print(a_lis)
 
 nor_lis=[]
 seq_lis=[]
@@ -32,9 +32,9 @@ t_lis=[]
 x_lis=[]
 labels=[]
 j=0
-
+'''
 for i in range(0,len(nor_lis)):
-    if nor_lis[i]==26:
+    if nor_lis[i]!=0:
         j+=1
         N = n_lis[i]
         labels.append(str(N))
@@ -54,6 +54,6 @@ def autolabel(rects):
 
 autolabel(bar_plot)
 plt.savefig('qbit.png')
-
+'''
 
     
