@@ -158,13 +158,3 @@ def cf_ind(res, bitlen, N, a):
             print(e)
             break
     return False
-
-
-if __name__ == '__main__':
-    res = int('10000000', 2)
-    denomi = 2 ** 8
-    frac = Rational(3, 7)
-
-    # CF(res,denomi,15,4)
-    # cf3(frac,15,4)
-    cf_ind(res, 8, 15, 4)

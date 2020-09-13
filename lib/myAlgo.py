@@ -1,7 +1,9 @@
 import os
 import sys
 import csv
-import qiskit
+from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
+from qiskit.tools.visualization import plot_histogram
+import numpy as np
 import lib.simulation as sim
 from lib.gateSet import *
 
@@ -80,25 +82,6 @@ def test_adder_appro(a, b, n, appro, args):
                        title=f'adder{a}_{b}_appro{appro}').savefig(path)
 
     print("=" * 40)
-
-
-def test_adder_em(a, b, n):
-    qc = adder(a, b, n, 1)
-    backend = qiskit.Aer.get_backend('qasm_simulator')
-    rbackend = provider.get_backend('ibmq_cambridge')
-    noise_model = NoiseModel.from_backend(rbackend, gate_error=False)
-    job = qiskit.execute(meas_calibs, backend=backend,
-                         shots=1000, noise_model=noise_model)
-    cal_results = job.result()
-    meas_fitter = CompleteMeasFitter(
-        cal_results, state_labels, circlabel='mcal')
-    meas_filter = meas_fitter.filter
-
-    # Results with mitigation
-    mitigated_results = meas_filter.apply(results)
-    mitigated_counts = mitigated_results.get_counts(0)
-    plot_histogram([noisy_counts, mitigated_counts],
-                   legend=['noisy', 'mitigated'])
 
 
 def test_adder(a, b, n, args):
@@ -459,7 +442,7 @@ def shorNormal(N, a, args=None):
         qc.measure(up[i], cr[2 * n - 1 - i])
     # ===========================================================================
     # Result formation
-    if args == None:
+    if args is None:
         return qc
     if args.draw:
         qcpath = f'./normal/circuit'
