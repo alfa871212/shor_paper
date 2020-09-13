@@ -466,8 +466,10 @@ def shorNormal(N, a, args=None):
             os.makedirs(qcpath)
         circuit_drawer(qc, output='mpl',
                        filename=f'./normal/circuit/{N}_{a}.png', scale=0.6)
-    #tmp = sim.gpuSim(qc)
-    #tmp2 = sim.cpuSim(qc)
+    if args.simcmp:
+        sim.gpuSim(qc)
+        sim.cpuSim(qc)
+        return 
 
     res = sim.mySim(qc, args)
 
@@ -479,7 +481,8 @@ def shorNormal(N, a, args=None):
         plot_histogram(res, figsize=(10, 10), title=f'N={N} a={a} result(Nor)').savefig(
             respath+f'/{N}_{a}_res.png')
     path = f'./normal/result/{N}_{a}.csv'
-
+    if os.path.exists(path):
+        print("Overwriting the existing data....")
     with open(f'./normal/result/{N}_{a}.csv', 'w') as out:
         csv_out = csv.writer(out)
         for i in lis:

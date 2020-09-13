@@ -100,13 +100,13 @@ def mySim(cir, args=None, method='qasm'):
             backend_options = {"method": "statevector"}
         sim_res = qk.execute(cir, backend, shots=8192,
                              optimization_level=1, backend_options=backend_options)
-
+        end = time.time()
         # qk.tools.job_monitor(sim_res)
         sim_result = sim_res.result()
         job_uid = sim_res.job_id()
 
         counts_result = sim_result.get_counts()
-        end = time.time()
+        
         print(f"Time cost: {end-beg} s")
     except Exception as e:
         print(e)
@@ -126,6 +126,7 @@ def gpuSim(cir):
     # Compile and run the Quantum circuit on a simulator backend
     job_sim = qk.execute(cir, backend,
                          backend_options=backend_options)
+    qk.tools.job_monitor(job_sim)
     end = time.time()
     sim_result = job_sim.result()
 
