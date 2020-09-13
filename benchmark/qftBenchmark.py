@@ -1,10 +1,10 @@
-from qiskit.circuit.library import QFT
-from qiskit import QuantumRegister, QuantumCircuit
-from qiskit.visualization import plot_histogram
-import simulation as sim
-import argparse
 import matplotlib.pyplot as plt
-#args = sim.process_command()
+from qiskit import QuantumRegister, QuantumCircuit
+from qiskit.circuit.library import QFT
+
+import simulation as sim
+
+# args = sim.process_command()
 x = []
 gt_lis = []
 ct_lis = []
@@ -18,7 +18,7 @@ for i in range(1, 29):
     gt_lis.append(sim.gpuSim(qc))
     ct_lis.append(sim.cpuSim(qc))
 
-plt.plot(x, gt_lis,label='GPU')
-plt.plot(x, ct_lis,label='CPU')
+plt.plot(x, gt_lis, label='GPU')
+plt.plot(x, ct_lis, label='CPU')
 plt.legend()
 plt.savefig('qftbenchmark.png')

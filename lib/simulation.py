@@ -1,15 +1,14 @@
-from qiskit.providers.aer.noise import NoiseModel
-#from qiskit_qcgpu_provider import QCGPUProvider
 import argparse
-import os
-import matplotlib.pyplot as plt
-import time
-import qiskit as qk
-import numpy as np
 import math
+import time
+
+import numpy as np
+import qiskit as qk
 from psutil import virtual_memory
+from qiskit.providers.aer.noise import NoiseModel
+
 mem = virtual_memory()
-allo_mem = math.ceil(mem.available*0.9)
+allo_mem = math.ceil(mem.available * 0.9)
 qk.IBMQ.load_account()
 
 
@@ -17,7 +16,7 @@ def sort_by_key(result):
     bitlen = len(next(iter(result.keys())))
     sorted_result = [('{n:0{b}b}'.format(n=i, b=bitlen),
                       result.get('{n:0{b}b}'.format(n=i, b=bitlen), 0))
-                     for i in range(2**bitlen)]
+                     for i in range(2 ** bitlen)]
     return sorted_result
 
 
@@ -59,7 +58,7 @@ def ind_mySim(cir, ctrl):
 def single_mySim(cir):
     provider = qk.IBMQ.get_provider('ibm-q-hub-ntu')
     backend = qk.Aer.get_backend('qasm_simulator')
-    #backend = provider.get_backend('ibmq_qasm_simulator')
+    # backend = provider.get_backend('ibmq_qasm_simulator')
 
     sim_res = qk.execute(cir, backend, shots=1, optimization_level=1)
     qk.tools.job_monitor(sim_res)
@@ -70,10 +69,9 @@ def single_mySim(cir):
 
 
 def mySim(cir, args=None, method='qasm'):
-
     provider = qk.IBMQ.get_provider('ibm-q-hub-ntu')
-    sim_type = method+'_simulator'
-    if args == None:
+    sim_type = method + '_simulator'
+    if args is None:
         backend = qk.Aer.get_backend('qasm_simulator')
         backend_options = {"method": "statevector"}
         sim_res = qk.execute(cir, backend, shots=8192,
@@ -106,8 +104,8 @@ def mySim(cir, args=None, method='qasm'):
         job_uid = sim_res.job_id()
 
         counts_result = sim_result.get_counts()
-        
-        print(f"Time cost: {end-beg} s")
+
+        print(f"Time cost: {end - beg} s")
     except Exception as e:
         print(e)
         if e == Exception('IBMQJobFailureError'):
@@ -118,7 +116,6 @@ def mySim(cir, args=None, method='qasm'):
 
 
 def gpuSim(cir):
-
     backend_options = {"method": "statevector_gpu", "max_memory_mb": allo_mem}
     backend = qk.Aer.get_backend("qasm_simulator")
 
@@ -132,7 +129,7 @@ def gpuSim(cir):
 
     # Show the results
 
-    time_cost = np.round(end-beg, 5)
+    time_cost = np.round(end - beg, 5)
     print(f"GPU sim time: {time_cost}")
     print(sim_result.get_counts())
     return time_cost
@@ -150,16 +147,16 @@ def cpuSim(cir):
     # Show the results
     # print(sim_result.get_counts())
     end = time.time()
-    time_cost = np.round(end-beg, 5)
+    time_cost = np.round(end - beg, 5)
     print(f"CPU sim time: {time_cost}")
     return time_cost
 
 
 def timeCMP(gtime, ctime):
     if gtime < ctime:
-        print(f"The GPU is faster by {100-100*np.round((gtime/ctime),3)}%")
+        print(f"The GPU is faster by {100 - 100 * np.round((gtime / ctime), 3)}%")
     if gtime >= ctime:
-        print(f"The GPU is slower by {100-100*np.round((ctime/gtime),3)}%")
+        print(f"The GPU is slower by {100 - 100 * np.round((ctime / gtime), 3)}%")
 
 
 def process_command():
@@ -179,7 +176,7 @@ def process_command():
     gate.add_argument('--nor', nargs=2, type=int, metavar=('N', 'a'))
     gate.add_argument('--seq', nargs=2, type=int, metavar=('N', 'a'))
 
-    #parser.add_argument('--test','-t',required=True, metavar='gate/algo')
+    # parser.add_argument('--test','-t',required=True, metavar='gate/algo')
     parser.add_argument('--output', '-o', action='store_true')
     parser.add_argument('--draw', '-d', action='store_true')
     parser.add_argument('--log', '-l', action='store_true')

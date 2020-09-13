@@ -1,8 +1,9 @@
-import qiskit
-
-from gateSet import *
 import os
 import sys
+import csv
+import qiskit
+import lib.simulation as sim
+from lib.gateSet import *
 
 
 def run_test(args):
@@ -38,7 +39,7 @@ def test_adder_appro(a, b, n, appro, args):
         path = f'adder/log/a{a}_b{b}_n{n}.log'
         sys.stdout = open(path, 'w')
     qc = adder_appro(a, b, n, appro)
-    print("="*40)
+    print("=" * 40)
     print(
         f"Executing adder_appro with a={a}, b={b}, n={n}, appro_deg={appro}...")
     if args.draw:
@@ -50,7 +51,7 @@ def test_adder_appro(a, b, n, appro, args):
             circuit_drawer(qc, filename=figpath, output='mpl')
     res = sim.mySim(qc, args)
     res_lis = list(res)
-    expect_res = a+b
+    expect_res = a + b
     meas_lis = []
     for i in range(len(res_lis)):
         meas_lis.append(int(res_lis[i], 2))
@@ -78,7 +79,7 @@ def test_adder_appro(a, b, n, appro, args):
         plot_histogram(res, figsize=(10, 10),
                        title=f'adder{a}_{b}_appro{appro}').savefig(path)
 
-    print("="*40)
+    print("=" * 40)
 
 
 def test_adder_em(a, b, n):
@@ -120,7 +121,7 @@ def test_adder(a, b, n, args):
             circuit_drawer(qc, filename=figpath, output='mpl')
     res = sim.mySim(qc, args)
     res_lis = list(res)
-    expect_res = a+b
+    expect_res = a + b
     meas_lis = []
     for i in range(len(res_lis)):
         meas_lis.append(int(res_lis[i], 2))
@@ -142,7 +143,7 @@ def test_adder(a, b, n, args):
         print("Result correct! Adder success!")
     else:
         print("Result wrong! Adder failed!")
-        if expect_res >= (2**n):
+        if expect_res >= (2 ** n):
             print("Overflow occurs!")
     if args.output:
         dir = f'./adder/result/{dir_name}'
@@ -157,14 +158,14 @@ def test_adder(a, b, n, args):
 
 
 def test_ccphiMOD(n, b, a, N, args, print_qc=False, save_fig=False):
-    print("-"*40)
-    bitlen = n+1
-    expect = (a+b) % N
+    print("-" * 40)
+    bitlen = n + 1
+    expect = (a + b) % N
     print(f'a={a}, b={b}, N={N}, (a+b)mod N={expect} (expect ans)')
     qr_ctrl = QuantumRegister(2, name='ctrl')
     qr_phi = QuantumRegister(bitlen, name='phi')
     qr_ancilla = QuantumRegister(1, name='ancilla')
-    cr_phi = ClassicalRegister(bitlen-1, name='cr_phi')
+    cr_phi = ClassicalRegister(bitlen - 1, name='cr_phi')
     cr_ancilla = ClassicalRegister(1, name='cr_ancilla')
     qc = QuantumCircuit(qr_ctrl, qr_phi, qr_ancilla, cr_phi, cr_ancilla)
     gate = ccphiADDmodN(n=n, a=a, b=b, N=N,
@@ -180,10 +181,10 @@ def test_ccphiMOD(n, b, a, N, args, print_qc=False, save_fig=False):
         if b_bin[i] == '1':
             qc.x(qr_phi[i])
     qc.append(qft, qargs=qr_phi[:])
-    qc.append(gate, qargs=qr_ctrl[:]+qr_phi[:]+qr_ancilla[:])
+    qc.append(gate, qargs=qr_ctrl[:] + qr_phi[:] + qr_ancilla[:])
     qc.append(iqft, qargs=qr_phi[:])
-    for i in range(bitlen-1):
-        qc.measure(qr_phi[i+1], cr_phi[bitlen-i-2])
+    for i in range(bitlen - 1):
+        qc.measure(qr_phi[i + 1], cr_phi[bitlen - i - 2])
     qc.measure(qr_ancilla, cr_ancilla)
 
     if print_qc:
@@ -203,16 +204,16 @@ def test_ccphiMOD(n, b, a, N, args, print_qc=False, save_fig=False):
         raise Exception("ancilla bit broken!")
 
     print(f"The expect result is {a}+{b} mod {N} = {expect}")
-    print(f"The measurement result is {res_num}={int(meas_phi,2)}")
+    print(f"The measurement result is {res_num}={int(meas_phi, 2)}")
     if expect == int(meas_phi, 2):
         print("Measure = Expect, Correct!")
     else:
         raise Exception('wrong ans')
-    print("-"*40)
+    print("-" * 40)
 
 
 def testCMULT(n, x, b, a, N, args, print_qc=False, save_fig=False):
-    bitlen = n+1
+    bitlen = n + 1
     qr_c = QuantumRegister(1, name='c')
     qr_x = QuantumRegister(n, name='x')
     qr_b = QuantumRegister(bitlen, name='b')
@@ -232,13 +233,13 @@ def testCMULT(n, x, b, a, N, args, print_qc=False, save_fig=False):
         if b_bin[i] == '1':
             qc.x(qr_b[i])
     gate = cmult_a_mod_N(n, a, b, N, False, True)
-    qc.append(gate, qargs=qr_c[:]+qr_x[:]+qr_b[:]+qr_ancilla[:])
+    qc.append(gate, qargs=qr_c[:] + qr_x[:] + qr_b[:] + qr_ancilla[:])
 
     for i in range(bitlen):
-        qc.measure(qr_b[i], cr_b[bitlen-i-1])
+        qc.measure(qr_b[i], cr_b[bitlen - i - 1])
     # circuit_drawer(qc,scale=0.8,filename='./report/cmult2.png',output='mpl')
     for i in range(n):
-        qc.measure(qr_x[i], cr_x[n-i-1])
+        qc.measure(qr_x[i], cr_x[n - i - 1])
     if print_qc:
         print(qc)
     if save_fig:
@@ -260,13 +261,13 @@ def testCMULT(n, x, b, a, N, args, print_qc=False, save_fig=False):
         print("Ancilla bit correct!")
     else:
         raise Exception("ancilla bit broken!")
-    expect = (b+a*x) % N
-    print(f"x={x}, b={b}, a={a}, N={N}, b+ax mod N={(b+a*x)%N} ")
+    expect = (b + a * x) % N
+    print(f"x={x}, b={b}, a={a}, N={N}, b+ax mod N={(b + a * x) % N} ")
 
     if expect == int(meas_b, 2):
         print("Expect = Measure = {0}".format(expect))
         print("Multiplier correct!")
-    elif a*x+b >= 2**bitlen:
+    elif a * x + b >= 2 ** bitlen:
         print("Expect = Measure = {0}".format(expect))
         print("Overflow occurs! Multiplier error!")
     else:
@@ -274,7 +275,7 @@ def testCMULT(n, x, b, a, N, args, print_qc=False, save_fig=False):
 
 
 def CMULTexp_latex(n, x, b, a, N, args, print_qc=False, save_fig=False):
-    bitlen = n+1
+    bitlen = n + 1
     qr_c = QuantumRegister(1, name='c')
     qr_x = QuantumRegister(n, name='x')
     qr_b = QuantumRegister(bitlen, name='b')
@@ -294,17 +295,17 @@ def CMULTexp_latex(n, x, b, a, N, args, print_qc=False, save_fig=False):
         if b_bin[i] == '1':
             qc.x(qr_b[i])
     gate = cmult_a_mod_N(n, a, b, N, False, True)
-    qc.append(gate, qargs=qr_c[:]+qr_x[:]+qr_b[:]+qr_ancilla[:])
+    qc.append(gate, qargs=qr_c[:] + qr_x[:] + qr_b[:] + qr_ancilla[:])
 
     for i in range(bitlen):
-        qc.measure(qr_b[i], cr_b[bitlen-i-1])
+        qc.measure(qr_b[i], cr_b[bitlen - i - 1])
     circuit_drawer(qc, scale=0.8, filename='./report/cmult3.png', output='mpl')
 
 
 def test_cu(n, x, a, N, args):
-    print(f'x={x},a={a},N={N},ax mod N = {(a*x)%N}')
+    print(f'x={x},a={a},N={N},ax mod N = {(a * x) % N}')
     a = a % N
-    bitlen = n+1
+    bitlen = n + 1
     qr_c = QuantumRegister(1, name='c')
     qr_x = QuantumRegister(n, name='x')
     qr_b_0 = QuantumRegister(bitlen, name='b0')
@@ -318,16 +319,16 @@ def test_cu(n, x, a, N, args):
         if x_bin[i] == '1':
             qc.x(qr_x[i])
     gate = cu_a(n, a, N, False, True)
-    qc.append(gate, qargs=qr_c[:]+qr_x[:]+qr_b_0[:]+qr_ancilla[:])
+    qc.append(gate, qargs=qr_c[:] + qr_x[:] + qr_b_0[:] + qr_ancilla[:])
 
     for i in range(n):
-        qc.measure(qr_x[i], cr[n-1-i])
+        qc.measure(qr_x[i], cr[n - 1 - i])
     circuit_drawer(qc, output='mpl', scale=0.8, filename='./report/cu.png')
     # print(qc)
     res = sim.mySim(qc, args)
     res_num = list(res)[0]
 
-    expect = (a*x) % N
+    expect = (a * x) % N
 
     if expect == int(res_num, 2):
         print("Expect = Measure = {0}".format(expect))
@@ -341,7 +342,7 @@ def check_cphiADD(num, qr, qc):
 
     for i in range(4):
         if binary[i] == '1':
-            qc.x(qr[i+1])
+            qc.x(qr[i + 1])
 
 
 def rangeTest_cMult(N):
@@ -411,24 +412,24 @@ def shorNormal_circuit(N, a, args):
         raise Exception("a,N are not coprime.")
     # circuit preparation
     n = math.ceil(math.log(N, 2))
-    up = QuantumRegister(2*n, name='up')
+    up = QuantumRegister(2 * n, name='up')
     down = QuantumRegister(n, name='x')
-    down_b = QuantumRegister(n+1, name='b')
+    down_b = QuantumRegister(n + 1, name='b')
     ancilla = QuantumRegister(1, name='ancilla')
-    cr = ClassicalRegister(2*n, name='cr')
+    cr = ClassicalRegister(2 * n, name='cr')
     qc = QuantumCircuit(up, down, down_b, ancilla, cr)
     # initialize
     qc.h(up)
-    qc.x(down[n-1])
+    qc.x(down[n - 1])
     # control-unitary gate application
-    for i in range(0, 2*n):
-        gate = cu_a(n, a**(2**i), N, print_qc=False)
-        qc.append(gate, qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
+    for i in range(0, 2 * n):
+        gate = cu_a(n, a ** (2 ** i), N, print_qc=False)
+        qc.append(gate, qargs=[up[i]] + down[:] + down_b[:] + ancilla[:])
     # rest circuit construction
-    qftgate = myQFT(2*n, inverse=True)
+    qftgate = myQFT(2 * n, inverse=True)
     qc.append(qftgate, qargs=up)
-    for i in range(0, 2*n):
-        qc.measure(up[i], cr[2*n-1-i])
+    for i in range(0, 2 * n):
+        qc.measure(up[i], cr[2 * n - 1 - i])
     return qc
 
 
@@ -438,24 +439,24 @@ def shorNormal(N, a, args=None):
         raise Exception("a,N are not coprime.")
     # circuit preparation
     n = math.ceil(math.log(N, 2))
-    up = QuantumRegister(2*n, name='up')
+    up = QuantumRegister(2 * n, name='up')
     down = QuantumRegister(n, name='x')
-    down_b = QuantumRegister(n+1, name='b')
+    down_b = QuantumRegister(n + 1, name='b')
     ancilla = QuantumRegister(1, name='ancilla')
-    cr = ClassicalRegister(2*n, name='cr')
+    cr = ClassicalRegister(2 * n, name='cr')
     qc = QuantumCircuit(up, down, down_b, ancilla, cr)
     # initialize
     qc.h(up)
-    qc.x(down[n-1])
+    qc.x(down[n - 1])
     # control-unitary gate application
-    for i in range(0, 2*n):
-        gate = cu_a(n, a**(2**i), N, print_qc=False)
-        qc.append(gate, qargs=[up[i]]+down[:]+down_b[:]+ancilla[:])
+    for i in range(0, 2 * n):
+        gate = cu_a(n, a ** (2 ** i), N, print_qc=False)
+        qc.append(gate, qargs=[up[i]] + down[:] + down_b[:] + ancilla[:])
     # rest circuit construction
-    qftgate = myQFT(2*n, inverse=True)
+    qftgate = myQFT(2 * n, inverse=True)
     qc.append(qftgate, qargs=up)
-    for i in range(0, 2*n):
-        qc.measure(up[i], cr[2*n-1-i])
+    for i in range(0, 2 * n):
+        qc.measure(up[i], cr[2 * n - 1 - i])
     # ===========================================================================
     # Result formation
     if args == None:
@@ -469,7 +470,7 @@ def shorNormal(N, a, args=None):
     if args.simcmp:
         sim.gpuSim(qc)
         sim.cpuSim(qc)
-        return 
+        return
 
     res = sim.mySim(qc, args)
 
@@ -479,7 +480,7 @@ def shorNormal(N, a, args=None):
         if not os.path.exists(respath):
             os.makedirs(respath)
         plot_histogram(res, figsize=(10, 10), title=f'N={N} a={a} result(Nor)').savefig(
-            respath+f'/{N}_{a}_res.png')
+            respath + f'/{N}_{a}_res.png')
     path = f'./normal/result/{N}_{a}.csv'
     if os.path.exists(path):
         print("Overwriting the existing data....")
@@ -493,18 +494,18 @@ def shorSequential_rev2(N, a):
     n = math.ceil(math.log(N, 2))
     ctrl = QuantumRegister(1, name='ctrl')
     down = QuantumRegister(n, name='x')
-    down_b = QuantumRegister(n+1, name='b')
+    down_b = QuantumRegister(n + 1, name='b')
     ancilla = QuantumRegister(1, name='ancilla')
-    cr = ClassicalRegister(2*n, name='cr')
+    cr = ClassicalRegister(2 * n, name='cr')
     c_aux = ClassicalRegister(1, name='caux')
     qc = QuantumCircuit(ancilla, down_b, down, ctrl, cr, c_aux)
     qc.x(down[0])
-    for i in range(2*n):
+    for i in range(2 * n):
         qc.x(ctrl).c_if(c_aux, 1)
-        neighbor_range = range(np.max([0, i - 2*n + 1]), 2*n - i - 1)
+        neighbor_range = range(np.max([0, i - 2 * n + 1]), 2 * n - i - 1)
         qc.h(ctrl)
-        gate = cu_a(n, a**(2**(2*n-1-i)), N)
-        qc.append(gate, qargs=ctrl[:]+down[:]+down_b[:]+ancilla[:])
+        gate = cu_a(n, a ** (2 ** (2 * n - 1 - i)), N)
+        qc.append(gate, qargs=ctrl[:] + down[:] + down_b[:] + ancilla[:])
         qc.h(ctrl)
         qc.measure(ctrl, c_aux)
         qc.measure(ctrl, cr)
@@ -518,21 +519,21 @@ def shorSequential(N, a, args=None):
     n = math.ceil(math.log(N, 2))
     ctrl = QuantumRegister(1, name='ctrl')
     down = QuantumRegister(n, name='x')
-    down_b = QuantumRegister(n+1, name='b')
+    down_b = QuantumRegister(n + 1, name='b')
     ancilla = QuantumRegister(1, name='ancilla')
     qc = QuantumCircuit(ctrl, down, down_b, ancilla)
     cr_lis = []
-    for i in range(0, 2*n):
+    for i in range(0, 2 * n):
         cr = ClassicalRegister(1)
         qc.add_register(cr)
         cr_lis.append(cr)
-    qc.x(down[n-1])
-    for i in range(2*n):
+    qc.x(down[n - 1])
+    for i in range(2 * n):
         qc.x(ctrl).c_if(cr_lis[i], 1)
-        neighbor_range = range(np.max([0, i - 2*n + 1]), 2*n - i - 1)
+        neighbor_range = range(np.max([0, i - 2 * n + 1]), 2 * n - i - 1)
         qc.h(ctrl)
-        gate = cu_a(n, a**(2**(2*n-1-i)), N)
-        qc.append(gate, qargs=ctrl[:]+down[:]+down_b[:]+ancilla[:])
+        gate = cu_a(n, a ** (2 ** (2 * n - 1 - i)), N)
+        qc.append(gate, qargs=ctrl[:] + down[:] + down_b[:] + ancilla[:])
         qc.h(ctrl)
         # qc.measure(ctrl,i)
         qc.measure(ctrl, cr_lis[i])
@@ -556,7 +557,7 @@ def shorSequential(N, a, args=None):
         tmp = iter
         tmp = tmp.replace(" ", "")
         new_dict[tmp] = res.pop(iter)
-   # print(new_dict)
+    # print(new_dict)
     lis = sim.sort_by_prob(new_dict)
     # print(lis)
     if args.output:
@@ -564,7 +565,7 @@ def shorSequential(N, a, args=None):
         if not os.path.exists(respath):
             os.makedirs(respath)
         plot_histogram(new_dict, figsize=(
-            10, 10), title=f'N={N} a={a} result(Seq)').savefig(respath+f'/{N}_{a}_res.png')
+            10, 10), title=f'N={N} a={a} result(Seq)').savefig(respath + f'/{N}_{a}_res.png')
     with open(f'./sequential/result/{N}_{a}.csv', 'w') as out:
         csv_out = csv.writer(out)
         for i in lis:
