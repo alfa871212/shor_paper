@@ -1,3 +1,5 @@
+import qiskit
+
 from gateSet import *
 import os
 import sys
