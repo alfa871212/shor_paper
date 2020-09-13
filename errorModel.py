@@ -1,5 +1,5 @@
-import simulation as sim
 from myAlgo import *
+
 N = 15
 a = 4
 qc = adder(3, 4, 4)

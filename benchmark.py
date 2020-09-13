@@ -1,15 +1,15 @@
-import click
-import time
+import csv
+import math
+import os.path
 import random
 import statistics
-import csv
-import os.path
-import math
+import time
 
+import click
 from qiskit import ClassicalRegister, QuantumRegister, QuantumCircuit
-from qiskit import QiskitError, execute, Aer
-
+from qiskit import execute, Aer
 from qiskit_qcgpu_provider import QCGPUProvider
+
 
 # Implementation of the Quantum Fourier Transform
 
@@ -22,7 +22,7 @@ def construct_circuit(num_qubits):
     # Quantum Fourier Transform
     for j in range(num_qubits):
         for k in range(j):
-            circ.cu1(math.pi / float(2**(j - k)), q[j], q[k])
+            circ.cu1(math.pi / float(2 ** (j - k)), q[j], q[k])
         circ.h(q[j])
     # circ.measure(q, c)
 
@@ -32,8 +32,10 @@ def construct_circuit(num_qubits):
 # Benchmarking functions
 qiskit_backend = Aer.get_backend('qasm_simulator')
 qcgpu_backend = QCGPUProvider().get_backend('qasm_simulator')
-#qiskit_backend = Aer.get_backend('statevector_simulator')
-#qcgpu_backend = QCGPUProvider().get_backend('statevector_simulator')
+
+
+# qiskit_backend = Aer.get_backend('statevector_simulator')
+# qcgpu_backend = QCGPUProvider().get_backend('statevector_simulator')
 
 
 def bench_qiskit(qc):
@@ -48,6 +50,7 @@ def bench_qcgpu(qc):
     job_sim = execute(qc, qcgpu_backend)
     sim_result = job_sim.result()
     return time.time() - start
+
 
 # Reporting
 

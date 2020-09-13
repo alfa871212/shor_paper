@@ -1,11 +1,10 @@
-from sympy.ntheory.continued_fraction import *
-from sympy.ntheory import n_order
-import numpy as np
-import math
-import sys
-import os
 import argparse
 import csv
+import math
+import sys
+
+from sympy.ntheory import n_order
+from sympy.ntheory.continued_fraction import *
 
 
 def better_a(m):
@@ -31,7 +30,6 @@ def args_parse():
 
 
 def run_CF(args):
-
     if args.individual:
         res = args.individual[0]
         bitlen = args.individual[1]
@@ -50,10 +48,10 @@ def run_CF(args):
 
 def checkFactor(r, N, a):
     if r % 2 == 0:
-        exponential = math.pow(a, r/2)
-        plus = int(exponential+1)
-        minus = int(exponential-1)
-        maxiter_2 = 15
+        exponential = math.pow(a, r / 2)
+        plus = int(exponential + 1)
+        minus = int(exponential - 1)
+
         p_factor = math.gcd(plus, N)
         q_factor = math.gcd(minus, N)
         p_tri_flag = False
@@ -67,17 +65,12 @@ def checkFactor(r, N, a):
             return False
         if not p_tri_flag:
             if math.gcd(p_factor, N) != 1:
-                print('Factors: {0}, {1}'.format(p_factor, N//p_factor))
+                print('Factors: {0}, {1}'.format(p_factor, N // p_factor))
                 return True
         if not q_tri_flag:
             if math.gcd(q_factor, N) != 1:
-                print('Factors: {0}, {1}'.format(q_factor, N//q_factor))
+                print('Factors: {0}, {1}'.format(q_factor, N // q_factor))
                 return True
-        '''
-        if (p_factor==1 or p_factor==N) and (q_factor==1 or q_factor==N):
-            print(f'trivial factors: {p_factor}, {q_factor}')
-            return False                  
-        '''
 
         print('Factors: {0}, {1}'.format(p_factor, q_factor))
         return True
@@ -86,7 +79,6 @@ def checkFactor(r, N, a):
 
 
 def cf_file(args):
-
     if not args.type:
         raise Exception("-f must with -t")
     if args.type == 'seq':
@@ -98,10 +90,10 @@ def cf_file(args):
     fileargs = args.file
     N = fileargs[0]
     a = fileargs[1]
-    filename = str(N)+"_"+str(a)+'.csv'
-    filename = path+filename
+    filename = str(N) + "_" + str(a) + '.csv'
+    filename = path + filename
     if args.log:
-        logpath = path+str(N)+"_"+str(a)+'.log'
+        logpath = path + str(N) + "_" + str(a) + '.log'
         sys.stdout = open(logpath, 'w')
     print(filename)
     with open(filename, newline='') as f:
@@ -110,14 +102,14 @@ def cf_file(args):
     succ = []
     for i in range(len(data)):
         res = data[i][0]
-        print('+'*35)
+        print('+' * 35)
         print(f"res: {res}")
         if cf_ind(res, len(res), N, a):
             succ.append(res)
     if len(succ) != 0:
-        print('*'*35)
+        print('*' * 35)
         print(f"Success res: {succ}")
-        print('*'*35)
+        print('*' * 35)
 
 
 def cf_ind(res, bitlen, N, a):
@@ -128,25 +120,25 @@ def cf_ind(res, bitlen, N, a):
         res = int(str(res), 2)
     else:
         res = int(res, 2)
-    denomi = 2**bitlen
+    denomi = 2 ** bitlen
     frac = Rational(res, denomi)
-    threshold = 1/(2*denomi)
-    print("="*35)
+    threshold = 1 / (2 * denomi)
+    print("=" * 35)
     print("CF algorithm rule:")
     print("(1) appro.denominator < N")
     print("(2) abs(appro-frac) < threshold")
-    print("="*35)
+    print("=" * 35)
 
     print(f"Analyzing fraction: {frac}")
     print(f"N = {N}, a={a}")
     it = continued_fraction_convergents(continued_fraction_iterator(frac))
     # next(it)
     for n in range(appro_deg):
-        print('-'*35)
+        print('-' * 35)
         try:
             app = next(it)
             print(f'{n}th appro: {app}')
-            dif = app-frac
+            dif = app - frac
             print(f'abs_diff: {abs(dif)}')
 
             pos_r = app.denominator()
@@ -170,7 +162,7 @@ def cf_ind(res, bitlen, N, a):
 
 if __name__ == '__main__':
     res = int('10000000', 2)
-    denomi = 2**8
+    denomi = 2 ** 8
     frac = Rational(3, 7)
 
     # CF(res,denomi,15,4)

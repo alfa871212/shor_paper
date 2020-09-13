@@ -1,7 +1,8 @@
-import csv
-from qiskit.visualization import plot_histogram
 import argparse
+import csv
 import math
+
+from qiskit.visualization import plot_histogram
 
 
 def process_command():
@@ -19,13 +20,13 @@ def process_command():
 
 
 def plot_from_csv(path, N, a):
-    filename = path+N+'_'+str(a)+'.csv'
+    filename = path + N + '_' + str(a) + '.csv'
     with open(filename, newline='') as f:
         reader = csv.reader(f)
         data = dict(list(reader))
     # print(data)
     plot_histogram(data, figsize=(10, 10), title=f'N={N} a={a} result(Nor)').savefig(
-        path+f'/{N}_{a}_res.png')
+        path + f'/{N}_{a}_res.png')
 
 
 if __name__ == "__main__":
